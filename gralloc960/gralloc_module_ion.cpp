@@ -75,7 +75,8 @@ int gralloc_backend_register(private_handle_t* hnd)
 		
 		if ( MAP_FAILED == mappedAddress )
 		{
-			AERR( "mmap( share_fd:%d ) failed with %s",  hnd->share_fd, strerror( errno ) );
+			//using strerror makes fail compile.
+		  AERR( "mmap( share_fd:%d ) failed with %s",  hnd->share_fd, "#ahmedx6_modif# gralloc_backend_register error");
 			retval = -errno;
 			break;
 		}
@@ -98,7 +99,8 @@ void gralloc_backend_unregister(private_handle_t* hnd)
 
 		if ( munmap( base,size ) < 0 )
 		{
-			AERR("Could not munmap base:%p size:%zd '%s'", base, size, strerror(errno));
+			//using strerror makes fail compile.
+		  AERR("Could not munmap base:%p size:%zd '%s'", base, size, "#ahmedx6_modif# gralloc_backend_unregister error");
 		}
 		break;
 	}

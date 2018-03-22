@@ -26,7 +26,8 @@ public class MultiSpinner extends TextView implements OnMultiChoiceClickListener
     }
 
     public MultiSpinner(Context context, AttributeSet attr) {
-        this(context, attr, com.android.internal.R.attr.spinnerStyle);
+        super(context, attr);
+        //this(context, attr, com.android.internal.R.attr.spinnerStyle);
     }
 
     public MultiSpinner(Context context, AttributeSet attr, int defStyle) {

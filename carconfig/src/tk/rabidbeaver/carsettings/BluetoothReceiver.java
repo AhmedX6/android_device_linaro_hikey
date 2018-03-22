@@ -4,7 +4,10 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
-import android.bluetooth.BluetoothPan;
+//++Ahmed
+import android.bluetooth.BluetoothA2dp;
+//
+//import android.bluetooth.BluetoothPan;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothProfile;
@@ -38,9 +41,11 @@ public class BluetoothReceiver extends BroadcastReceiver {
             final BluetoothProfile.ServiceListener mBtProfileServiceListener =
                 new android.bluetooth.BluetoothProfile.ServiceListener() {
                     public void onServiceConnected(int profile, BluetoothProfile proxy) {
-                        if (!((BluetoothPan) proxy).connect(device)){
+			//++Ahmed
+			Log.d("BluetoothEventReceiver", "Service connected, profile is : " + proxy);
+                        /*if (!((BluetoothPan) proxy).connect(device)){
                             Log.e("BluetoothEventReceiver", "Unable to start connection");
-                        }
+                        }*/
                     }
 
                     public void onServiceDisconnected(int profile) {}
@@ -49,7 +54,7 @@ public class BluetoothReceiver extends BroadcastReceiver {
             BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 
             if (mBluetoothAdapter != null) {
-                mBluetoothAdapter.getProfileProxy(context, mBtProfileServiceListener, BluetoothProfile.PAN);
+                mBluetoothAdapter.getProfileProxy(context, mBtProfileServiceListener, BluetoothProfile.A2DP);
             }
         }
     }

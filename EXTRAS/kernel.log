@@ -1,0 +1,1481 @@
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.9.67-gf777f15 (uidw3651@radjnkau) (gcc version 4.9.x 20150123 (prerelease) (GCC) ) #1 SMP PREEMPT Wed Mar 21 12:13:57 CET 2018
+[    0.000000] Boot CPU: AArch64 Processor [410fd034]
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] Ion: base 0xde200000, size is 0x1e00000, node name graphic, heap-name carveout_gralloc namesize 17,[99][97][114][118]
+[    0.000000] Ion: insert heap-name carveout_gralloc 
+[    0.000000] OF: reserved mem: initialized node graphic, compatible id hisi_ion
+[    0.000000] Reserved memory: created CMA memory pool at 0x0000000016c00000, size 64 MiB
+[    0.000000] OF: reserved mem: initialized node fastboot-cma-mem, compatible id shared-dma-pool
+[    0.000000] cma: Reserved 64 MiB at 0x00000000da000000
+[    0.000000] On node 0 totalpages: 1044415
+[    0.000000] DMA zone: 14271 pages used for memmap
+[    0.000000] DMA zone: 0 pages reserved
+[    0.000000] DMA zone: 913343 pages, LIFO batch:31
+[    0.000000] Normal zone: 2048 pages used for memmap
+[    0.000000] Normal zone: 131072 pages, LIFO batch:31
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.0 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] percpu: Embedded 21 pages/cpu @ffffffc21fefb000 s53272 r0 d32744 u86016
+[    0.000000] pcpu-alloc: s53272 r0 d32744 u86016 alloc=21*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 [0] 4 [0] 5 [0] 6 [0] 7 
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] CPU features: enabling workaround for ARM erratum 845719
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 1028096
+[    0.000000] Kernel command line: androidboot.hardware=hikey960 console=ttyFIQ0 androidboot.console=ttyFIQ0 firmware_class.path=/system/etc/firmware loglevel=15 buildvariant=userdebug androidboot.swtype=normal fastboot_version=DailyBuild_201707201535_FASTBOOT setup_logctl=1 fastbootdmd=0 enter_recovery=0 androidboot.mode=normal low_volt_flag=1 boardid=0x000014b5 normal_reset_type=coldboot ddr_die=2048M@0M ddr_die=2048M@2048M  efuse_status=2 androidboot.serialno=0123456789ABCDEF himntn=111111111111111010111111101001100010001 boot_slice=0x0001c673 reboot_reason=AP_S_COLDBOOT recovery_update=0 userlock=locked bootlock=unlocked hw_bfm_enable=0 ddr_density=2 swiotlb=2 mdmreglogbase=0x00000000 mdmreglogsize=0x00000000 modem_socp_enable=0 androidboot.hardware=HiKey960 androidboot.veritymode=enforcing androidboot.verifiedbootstate=ORANGE ufs_product_name=KLUBG4G1CE-B0B1 format_data=1 cpu_buck_reg=0x;; androidboot.ddrsize=4 kce_status=1  console=ttyAMA6,115200 
+[    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000000] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes)
+[    0.000000] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes)
+[    0.000000] software IO TLB [mem 0xde1bf000-0xde1ff000] (0MB) mapped at [ffffffc0de1bf000-ffffffc0de1fefff]
+[    0.000000] Memory: 3903564K/4177660K available (13052K kernel code, 1326K rwdata, 3772K rodata, 1152K init, 992K bss, 143024K reserved, 131072K cma-reserved)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000] modules : 0xffffff8000000000 - 0xffffff8008000000   (   128 MB)
+[    0.000000] vmalloc : 0xffffff8008000000 - 0xffffffbebfff0000   (   250 GB)
+[    0.000000] .text : 0xffffff8008080000 - 0xffffff8008d40000   ( 13056 KB)
+[    0.000000] .rodata : 0xffffff8008d40000 - 0xffffff8009100000   (  3840 KB)
+[    0.000000] .init : 0xffffff8009100000 - 0xffffff8009220000   (  1152 KB)
+[    0.000000] .data : 0xffffff8009220000 - 0xffffff800936ba00   (  1327 KB)
+[    0.000000] .bss : 0xffffff800936ba00 - 0xffffff8009463bcc   (   993 KB)
+[    0.000000] fixed   : 0xffffffbefe7fd000 - 0xffffffbefec00000   (  4108 KB)
+[    0.000000] PCI I/O : 0xffffffbefee00000 - 0xffffffbeffe00000   (    16 MB)
+[    0.000000] vmemmap : 0xffffffbf00000000 - 0xffffffc000000000   (     4 GB maximum)
+[    0.000000] 0xffffffbf00000000 - 0xffffffbf08800000   (   136 MB actual)
+[    0.000000] memory  : 0xffffffc000000000 - 0xffffffc220000000   (  8704 MB)
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000] \x09Build-time adjustment of leaf fanout to 64.
+[    0.000000] \x09RCU restricting CPUs from NR_CPUS=64 to nr_cpu_ids=8.
+[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=64, nr_cpu_ids=8
+[    0.000000] NR_IRQS:64 nr_irqs:64 0
+[    0.000000] arm_arch_timer: Architected cp15 timer(s) running at 1.92MHz (virt).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x1c570327e, max_idle_ns: 1763180809505 ns
+[    0.000005] sched_clock: 56 bits at 1920kHz, resolution 520ns, wraps every 4398046510977ns
+[    0.000094] clocksource: arm,sp804: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 58334160866034 ns
+[    0.000744] Console: colour dummy device 80x25
+[    0.000779] Calibrating delay loop (skipped), value calculated using timer frequency.. 3.84 BogoMIPS (lpj=7680)
+[    0.000791] pid_max: default: 32768 minimum: 301
+[    0.000957] Security Framework initialized
+[    0.000969] SELinux:  Initializing.
+[    0.001031] SELinux:  Starting in permissive mode
+[    0.001091] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.001100] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.001977] ftrace: allocating 41589 entries in 163 pages
+[    0.070409] sched-energy: Sched-energy-costs installed from DT
+[    0.070441] CPU0: update cpu_capacity 462
+[    0.070465] ASID allocator initialised with 65536 entries
+[    0.102092] EFI services will not be available.
+[    0.150021] Detected VIPT I-cache on CPU1
+[    0.150106] CPU1: update cpu_capacity 462
+[    0.150108] CPU1: Booted secondary processor [410fd034]
+[    0.181932] Detected VIPT I-cache on CPU2
+[    0.181963] CPU2: update cpu_capacity 462
+[    0.181965] CPU2: Booted secondary processor [410fd034]
+[    0.213966] Detected VIPT I-cache on CPU3
+[    0.213991] CPU3: update cpu_capacity 462
+[    0.213993] CPU3: Booted secondary processor [410fd034]
+[    0.247578] Detected VIPT I-cache on CPU4
+[    0.247589] CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64MMFR0_EL1. Boot CPU: 0x00000000001122, CPU4: 0x00000000101122
+[    0.247597] CPU features: Unsupported CPU feature variation detected.
+[    0.247622] CPU4: update cpu_capacity 1024
+[    0.247623] CPU4: Booted secondary processor [410fd091]
+[    0.278015] Detected VIPT I-cache on CPU5
+[    0.278020] CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64MMFR0_EL1. Boot CPU: 0x00000000001122, CPU5: 0x00000000101122
+[    0.278035] CPU5: update cpu_capacity 1024
+[    0.278037] CPU5: Booted secondary processor [410fd091]
+[    0.310064] Detected VIPT I-cache on CPU6
+[    0.310069] CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64MMFR0_EL1. Boot CPU: 0x00000000001122, CPU6: 0x00000000101122
+[    0.310084] CPU6: update cpu_capacity 1024
+[    0.310086] CPU6: Booted secondary processor [410fd091]
+[    0.342123] Detected VIPT I-cache on CPU7
+[    0.342128] CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64MMFR0_EL1. Boot CPU: 0x00000000001122, CPU7: 0x00000000101122
+[    0.342143] CPU7: update cpu_capacity 1024
+[    0.342145] CPU7: Booted secondary processor [410fd091]
+[    0.342217] Brought up 8 CPUs
+[    0.342273] SMP: Total of 8 processors activated.
+[    0.342283] CPU features: detected feature: 32-bit EL0 Support
+[    0.342340] CPU: All CPU(s) started at EL1
+[    0.342384] alternatives: patching kernel code
+[    0.342536] CPU7: update max cpu_capacity 1024
+[    0.346058] CPU2: update max cpu_capacity 462
+[    0.346068] CPU5: update max cpu_capacity 1024
+[    0.358673] DMI not present or invalid.
+[    0.358956] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.358975] futex hash table entries: 2048 (order: 6, 262144 bytes)
+[    0.361947] xor: measuring software checksum speed
+[    0.401909] 8regs     :  3628.000 MB/sec
+[    0.441918] 8regs_prefetch:  3866.000 MB/sec
+[    0.481949] 32regs    :  4543.000 MB/sec
+[    0.521980] 32regs_prefetch:  3866.000 MB/sec
+[    0.521986] xor: using function: 32regs (4543.000 MB/sec)
+[    0.521999] pinctrl core: initialized pinctrl subsystem
+[    0.523073] NET: Registered protocol family 16
+[    0.523742] schedtune: init normalization constants...
+[    0.523752] schedtune: CLUSTER[0-3]      min_pwr:     0 max_pwr:   144
+[    0.523758] schedtune: CPU[0]            min_pwr:     0 max_pwr:   502
+[    0.523765] schedtune: CPU[1]            min_pwr:     0 max_pwr:   502
+[    0.523770] schedtune: CPU[2]            min_pwr:     0 max_pwr:   502
+[    0.523776] schedtune: CPU[3]            min_pwr:     0 max_pwr:   502
+[    0.523782] schedtune: CLUSTER[4-7]      min_pwr:     0 max_pwr:   433
+[    0.523787] schedtune: CPU[4]            min_pwr:     0 max_pwr:  2848
+[    0.523792] schedtune: CPU[5]            min_pwr:     0 max_pwr:  2848
+[    0.523797] schedtune: CPU[6]            min_pwr:     0 max_pwr:  2848
+[    0.523803] schedtune: CPU[7]            min_pwr:     0 max_pwr:  2848
+[    0.523808] schedtune: SYSTEM            min_pwr:     0 max_pwr: 13977
+[    0.523814] schedtune: using normalization constants mul: 739642719 sh1: 1 sh2: 13
+[    0.523818] schedtune: verify normalization constants...
+[    0.523823] schedtune: max_pwr/2^0: 13977 => norm_pwr:  1024
+[    0.523829] schedtune: max_pwr/2^1: 6988 => norm_pwr:   511
+[    0.523833] schedtune: max_pwr/2^2: 3494 => norm_pwr:   255
+[    0.523838] schedtune: max_pwr/2^3: 1747 => norm_pwr:   127
+[    0.523843] schedtune: max_pwr/2^4:  873 => norm_pwr:    63
+[    0.523848] schedtune: max_pwr/2^5:  436 => norm_pwr:    31
+[    0.523854] schedtune: configured to support 5 boost groups
+[    0.539756] cpuidle: using governor ladder
+[    0.551761] cpuidle: using governor menu
+[    0.551797] Registered FIQ tty driver
+[    0.551858] serial_debugger: uart overlay applied
+[    0.552355] vdso: 2 pages (1 code @ ffffff8008d47000, 1 data @ ffffff8009224000)
+[    0.552366] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.553258] DMA: preallocated 256 KiB pool for atomic allocations
+[    0.553328] Serial: AMBA PL011 UART driver
+[    0.553574] pstore: using zlib compression
+[    0.554051] console [pstore-1] enabled
+[    0.554072] pstore: Registered ramoops as persistent store backend
+[    0.554080] ramoops: attached 0x100000@0x20a00000, ecc: 0/0
+[    0.571542] hi3660-mbox e896b000.mailbox: Mailbox enabled
+[    0.572745] uart-pl011 ffd74000.serial: could not find pctldev for node /soc/pinmux@e896c000/uart3_pmx_func, deferring probe
+[    0.572966] uart-pl011 fdf01000.serial: could not find pctldev for node /soc/pinmux@e896c000/uart4_pmx_func, deferring probe
+[    0.604200] HugeTLB registered 2 MB page size, pre-allocated 0 pages
+[    0.670222] raid6: int64x1  gen()  1109 MB/s
+[    0.738278] raid6: int64x1  xor()   767 MB/s
+[    0.806335] raid6: int64x2  gen()  1451 MB/s
+[    0.874393] raid6: int64x2  xor()   985 MB/s
+[    0.942444] raid6: int64x4  gen()  1796 MB/s
+[    1.010494] raid6: int64x4  xor()  1110 MB/s
+[    1.078532] raid6: int64x8  gen()  1629 MB/s
+[    1.146586] raid6: int64x8  xor()  1008 MB/s
+[    1.214658] raid6: neonx1   gen()  1996 MB/s
+[    1.282696] raid6: neonx1   xor()  1194 MB/s
+[    1.350746] raid6: neonx2   gen()  2886 MB/s
+[    1.418801] raid6: neonx2   xor()  1941 MB/s
+[    1.486845] raid6: neonx4   gen()  4514 MB/s
+[    1.554898] raid6: neonx4   xor()  2573 MB/s
+[    1.622957] raid6: neonx8   gen()  3181 MB/s
+[    1.691014] raid6: neonx8   xor()  2160 MB/s
+[    1.691021] raid6: using algorithm neonx4 gen() 4514 MB/s
+[    1.691029] raid6: .... xor() 2573 MB/s, rmw enabled
+[    1.691036] raid6: using intx1 recovery algorithm
+[    1.691294] ACPI: Interpreter disabled.
+[    1.691994] hisi_smmu_probe_lpae, smmu_phy_pgtable_addr is = 89cc07a0
+[    1.692110] vgaarb: loaded
+[    1.692297] SCSI subsystem initialized
+[    1.692424] libata version 3.00 loaded.
+[    1.692525] ssp-pl022 ffd68000.spi: could not find pctldev for node /soc/pinmux@fff11000/spi2_pmx_func, deferring probe
+[    1.692554] ssp-pl022 ff3b3000.spi: could not find pctldev for node /soc/pinmux@ff3b6000/spi3_pmx_func, deferring probe
+[    1.692738] usbcore: registered new interface driver usbfs
+[    1.692770] usbcore: registered new interface driver hub
+[    1.692849] usbcore: registered new device driver usb
+[    1.692869] tcpc_class_init_1.1.1_G
+[    1.692888] TCPC class init OK
+[    1.692902] Init Richtek RegMap
+[    1.693024] i2c_designware ffd71000.i2c: could not find pctldev for node /soc/pinmux@fff11000/i2c0_pmx_func, deferring probe
+[    1.693052] i2c_designware ffd72000.i2c: could not find pctldev for node /soc/pinmux@fff11000/i2c1_pmx_func, deferring probe
+[    1.693080] i2c_designware fdf0b000.i2c: could not find pctldev for node /soc/pinmux@fff11000/i2c7_pmx_func, deferring probe
+[    1.693154] Linux video capture interface: v2.00
+[    1.693315] dmi: Firmware registration failed.
+[    1.693489] Ion: invalid heap-name in node iommu_info, please check the name 
+[    1.693500] Ion: invalid heap-name in node linear, please check the name 
+[    1.693550] Ion: node name [heap_sys_user], heap-name [sys_heap]
+[    1.693562] Ion: heap index 0 : name sys_heap base 0x0 size 0x0 id 0 type 0
+[    1.693570] Ion: heap sys_heap base =0, try to find dynamic area 
+[    1.693578] Ion: name = sys_heap, table name carveout_gralloc 
+[    1.693585] Ion: name = sys_heap, table name  
+[    1.693592] Ion: name = sys_heap, table name  
+[    1.693598] Ion: name = sys_heap, table name  
+[    1.693605] Ion: name = sys_heap, table name  
+[    1.693620] Ion: node name [heap_sys_contig], heap-name [sys_contig]
+[    1.693631] Ion: heap index 1 : name sys_contig base 0x0 size 0x0 id 1 type 1
+[    1.693639] Ion: heap sys_contig base =0, try to find dynamic area 
+[    1.693646] Ion: name = sys_contig, table name carveout_gralloc 
+[    1.693653] Ion: name = sys_contig, table name  
+[    1.693659] Ion: name = sys_contig, table name  
+[    1.693666] Ion: name = sys_contig, table name  
+[    1.693672] Ion: name = sys_contig, table name  
+[    1.693689] Ion: node name [heap_carveout_gralloc], heap-name [carveout_gralloc]
+[    1.693699] Ion: heap index 2 : name carveout_gralloc base 0x0 size 0x0 id 2 type 2
+[    1.693707] Ion: heap carveout_gralloc base =0, try to find dynamic area 
+[    1.693714] Ion: name = carveout_gralloc, table name carveout_gralloc 
+[    1.693721] Ion: have found heap name carveout_gralloc base = 0xde200000, size 31457280
+[    1.693735] Ion: node name [heap_camera], heap-name [camera_heap]
+[    1.693746] Ion: type name error ion_dma_pool!
+[    1.693765] in hisi_ion_enable_iommu start
+[    1.693777] get_domain_data_lpae:start_addr 0x40000, size 0xbffc0000 align 0x8000
+[    1.693791] Ion: id 0  name sys_heap base 0 size 0
+[    1.693872] Ion: adding heap sys_heap of type 0 with 0@0
+[    1.693880] Ion: id 1  name sys_contig base 0 size 0
+[    1.693896] Ion: adding heap sys_contig of type 1 with 0@0
+[    1.693904] Ion: id 2  name carveout_gralloc base 3726639104 size 31457280
+[    1.698578] Ion: adding heap carveout_gralloc of type 2 with de200000@1e00000
+[    1.698830] Advanced Linux Sound Architecture Driver Initialized.
+[    1.699189] Bluetooth: Core ver 2.22
+[    1.699224] NET: Registered protocol family 31
+[    1.699232] Bluetooth: HCI device and connection manager initialized
+[    1.699246] Bluetooth: HCI socket layer initialized
+[    1.699257] Bluetooth: L2CAP socket layer initialized
+[    1.699287] Bluetooth: SCO socket layer initialized
+[    1.699557] NetLabel: Initializing
+[    1.699566] NetLabel:  domain hash size = 128
+[    1.699573] NetLabel:  protocols = UNLABELED CIPSOv4
+[    1.699610] NetLabel:  unlabeled traffic allowed by default
+[    1.700327] clocksource: Switched to clocksource arch_sys_counter
+[    1.764742] VFS: Disk quotas dquot_6.6.0
+[    1.764825] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    1.765186] pnp: PnP ACPI: disabled
+[    1.768932] NET: Registered protocol family 2
+[    1.769355] TCP established hash table entries: 32768 (order: 6, 262144 bytes)
+[    1.769502] TCP bind hash table entries: 32768 (order: 7, 524288 bytes)
+[    1.769711] TCP: Hash tables configured (established 32768 bind 32768)
+[    1.769754] UDP hash table entries: 2048 (order: 4, 65536 bytes)
+[    1.769786] UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes)
+[    1.769951] NET: Registered protocol family 1
+[    1.769978] PCI: CLS 0 bytes, default 128
+[    1.770164] Trying to unpack rootfs image as initramfs...
+[    1.807598] Freeing initrd memory: 1400K
+[    1.808521] hw perfevents: enabled with armv8_pmuv3 PMU driver, 7 counters available
+[    1.808736] kvm [1]: HYP mode not available
+[    1.810880] audit: initializing netlink subsys (disabled)
+[    1.810942] audit: type=2000 audit(1.755:1): initialized
+[    1.811535] workingset: timestamp_bits=46 max_order=20 bucket_order=0
+[    1.812235] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    1.812354] fuse init (API version 7.26)
+[    1.812508] 9p: Installing v9fs 9p2000 file system support
+[    1.812695] SELinux:  Registering netfilter hooks
+[    1.815091] io scheduler noop registered
+[    1.815116] io scheduler cfq registered (default)
+[    1.815843] pinctrl-single e896c000.pinmux: 124 pins at pa ffffff800959a000 size 496
+[    1.815960] pinctrl-single ff37e000.pinmux: 6 pins at pa ffffff800959c000 size 24
+[    1.816067] pinctrl-single ff3b6000.pinmux: 12 pins at pa ffffff800959e000 size 48
+[    1.816164] pinctrl-single ff3fd000.pinmux: 6 pins at pa ffffff80095a0000 size 24
+[    1.816287] pinctrl-single fff11000.pinmux: 42 pins at pa ffffff80095a2000 size 168
+[    1.816515] pinctrl-single e896c800.pinmux: 128 pins at pa ffffff80095a4800 size 512
+[    1.816618] pinctrl-single ff3b6800.pinmux: 6 pins at pa ffffff80095a6800 size 24
+[    1.816720] pinctrl-single ff3fd800.pinmux: 6 pins at pa ffffff80095a8800 size 24
+[    1.816823] pinctrl-single ff37e800.pinmux: 6 pins at pa ffffff80095aa800 size 24
+[    1.816960] pinctrl-single fff11800.pinmux: 47 pins at pa ffffff80095ac800 size 188
+[    1.817557] pl061_gpio e8a0b000.gpio: PL061 GPIO chip @0x00000000e8a0b000 registered
+[    1.817919] pl061_gpio e8a0c000.gpio: PL061 GPIO chip @0x00000000e8a0c000 registered
+[    1.818268] pl061_gpio e8a0d000.gpio: PL061 GPIO chip @0x00000000e8a0d000 registered
+[    1.818622] pl061_gpio e8a0e000.gpio: PL061 GPIO chip @0x00000000e8a0e000 registered
+[    1.818971] pl061_gpio e8a0f000.gpio: PL061 GPIO chip @0x00000000e8a0f000 registered
+[    1.819311] pl061_gpio e8a10000.gpio: PL061 GPIO chip @0x00000000e8a10000 registered
+[    1.819654] pl061_gpio e8a11000.gpio: PL061 GPIO chip @0x00000000e8a11000 registered
+[    1.819997] pl061_gpio e8a12000.gpio: PL061 GPIO chip @0x00000000e8a12000 registered
+[    1.820350] pl061_gpio e8a13000.gpio: PL061 GPIO chip @0x00000000e8a13000 registered
+[    1.820695] pl061_gpio e8a14000.gpio: PL061 GPIO chip @0x00000000e8a14000 registered
+[    1.821041] pl061_gpio e8a15000.gpio: PL061 GPIO chip @0x00000000e8a15000 registered
+[    1.821390] pl061_gpio e8a16000.gpio: PL061 GPIO chip @0x00000000e8a16000 registered
+[    1.821738] pl061_gpio e8a17000.gpio: PL061 GPIO chip @0x00000000e8a17000 registered
+[    1.822081] pl061_gpio e8a18000.gpio: PL061 GPIO chip @0x00000000e8a18000 registered
+[    1.822427] pl061_gpio e8a19000.gpio: PL061 GPIO chip @0x00000000e8a19000 registered
+[    1.822772] pl061_gpio e8a1a000.gpio: PL061 GPIO chip @0x00000000e8a1a000 registered
+[    1.823109] pl061_gpio e8a1b000.gpio: PL061 GPIO chip @0x00000000e8a1b000 registered
+[    1.823446] pl061_gpio e8a1c000.gpio: PL061 GPIO chip @0x00000000e8a1c000 registered
+[    1.823808] pl061_gpio ff3b4000.gpio: PL061 GPIO chip @0x00000000ff3b4000 registered
+[    1.824157] pl061_gpio ff3b5000.gpio: PL061 GPIO chip @0x00000000ff3b5000 registered
+[    1.824518] pl061_gpio e8a1f000.gpio: PL061 GPIO chip @0x00000000e8a1f000 registered
+[    1.824865] pl061_gpio e8a20000.gpio: PL061 GPIO chip @0x00000000e8a20000 registered
+[    1.825227] pl061_gpio fff0b000.gpio: PL061 GPIO chip @0x00000000fff0b000 registered
+[    1.825583] pl061_gpio fff0c000.gpio: PL061 GPIO chip @0x00000000fff0c000 registered
+[    1.825939] pl061_gpio fff0d000.gpio: PL061 GPIO chip @0x00000000fff0d000 registered
+[    1.826302] pl061_gpio fff0e000.gpio: PL061 GPIO chip @0x00000000fff0e000 registered
+[    1.826660] pl061_gpio fff0f000.gpio: PL061 GPIO chip @0x00000000fff0f000 registered
+[    1.827019] pl061_gpio fff10000.gpio: PL061 GPIO chip @0x00000000fff10000 registered
+[    1.827366] pl061_gpio fff1d000.gpio: PL061 GPIO chip @0x00000000fff1d000 registered
+[    1.858494] OF: PCI: host bridge /soc/pcie@f4000000 ranges:
+[    1.858514] OF: PCI:   MEM 0xf6000000..0xf7ffffff -> 0x00000000
+[    2.859232] Kirin-pcie f4000000.pcie: Link Fail
+[    2.859342] Kirin-pcie f4000000.pcie: PCI host bridge to bus 0000:00
+[    2.859355] pci_bus 0000:00: root bus resource [bus 00-01]
+[    2.859366] pci_bus 0000:00: root bus resource [mem 0xf6000000-0xf7ffffff] (bus address [0x00000000-0x01ffffff])
+[    2.859404] pci 0000:00:00.0: [19e5:3660] type 01 class 0x060400
+[    2.859442] pci 0000:00:00.0: reg 0x10: [mem 0xf6000000-0xf6ffffff]
+[    2.859580] pci 0000:00:00.0: supports D1 D2
+[    2.859589] pci 0000:00:00.0: PME# supported from D0 D1 D2 D3hot
+[    2.859905] pci 0000:00:00.0: BAR 0: assigned [mem 0xf6000000-0xf6ffffff]
+[    2.859921] pci 0000:00:00.0: PCI bridge to [bus 01]
+[    2.860199] pcieport 0000:00:00.0: Signaling PME through PCIe PME interrupt
+[    2.860213] pcie_pme 0000:00:00.0:pcie001: service driver pcie_pme loaded
+[    2.860328] aer 0000:00:00.0:pcie002: service driver aer loaded
+[    2.862847] hisi-asp-dma e804b000.asp_dmac: initialized
+[    2.864583] Serial: 8250/16550 driver, 4 ports, IRQ sharing disabled
+[    2.865874] [drm] Initialized
+[    2.866215] [drm] wait for external HDMI bridge driver.
+[    2.866371] mali e82c0000.mali: Continuing without Mali regulator control
+[    2.867018] mali e82c0000.mali: GPU identified as 0x0 arch 6.0.10 r0p0 status 2
+[    2.867593] mali e82c0000.mali: Using configured power model mali-simple-power-model, and fallback mali-simple-power-model
+[    2.868000] mali e82c0000.mali: Probed as mali0
+[    2.872339] Error reading temperature for gpu thermal zone: -22
+[    2.875378] brd: module loaded
+[    2.879140] loop: module loaded
+[    2.879385] [I/GPIO_HUB] gpio_hub_probe: step in
+[    2.879570] [I/GPIO_HUB] gpio_hub_init:gpio hub init status:0
+[    2.881800] ufshcd-hi3660 ff3b0000.ufs: ufshcd_populate_vreg: Unable to find vdd-hba-supply regulator, assuming enabled
+[    2.881812] ufshcd-hi3660 ff3b0000.ufs: ufshcd_populate_vreg: Unable to find vcc-supply regulator, assuming enabled
+[    2.881822] ufshcd-hi3660 ff3b0000.ufs: ufshcd_populate_vreg: Unable to find vccq-supply regulator, assuming enabled
+[    2.881831] ufshcd-hi3660 ff3b0000.ufs: ufshcd_populate_vreg: Unable to find vccq2-supply regulator, assuming enabled
+[    2.903221] scsi host0: ufshcd
+[    2.913229] libphy: Fixed MDIO Bus: probed
+[    2.913238] tun: Universal TUN/TAP device driver, 1.6
+[    2.913245] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[    2.913653] PPP generic driver version 2.4.2
+[    2.913735] PPP BSD Compression module registered
+[    2.913744] PPP Deflate Compression module registered
+[    2.913767] PPP MPPE Compression module registered
+[    2.913857] pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+[    2.913893] usbcore: registered new interface driver pegasus
+[    2.913924] usbcore: registered new interface driver rtl8150
+[    2.913954] usbcore: registered new interface driver r8152
+[    2.913989] usbcore: registered new interface driver asix
+[    2.914020] usbcore: registered new interface driver ax88179_178a
+[    2.914050] usbcore: registered new interface driver cdc_ether
+[    2.914081] usbcore: registered new interface driver dm9601
+[    2.914111] usbcore: registered new interface driver CoreChips
+[    2.914142] usbcore: registered new interface driver smsc75xx
+[    2.914172] usbcore: registered new interface driver smsc95xx
+[    2.914203] usbcore: registered new interface driver net1080
+[    2.914233] usbcore: registered new interface driver plusb
+[    2.914264] usbcore: registered new interface driver cdc_subset
+[    2.914294] usbcore: registered new interface driver zaurus
+[    2.914328] usbcore: registered new interface driver MOSCHIP usb-ethernet driver
+[    2.914364] usbcore: registered new interface driver cdc_ncm
+[    2.914690] [USB3][hisi_dwc3_probe]+
+[    2.914806] [USB3][get_phy_param]eye diagram param: 0x1c466e3
+[    2.914815] [USB3][get_phy_param]eye diagram host param: 0x1c466e3
+[    2.914823] [USB3][get_phy_param]usb3_phy_cr_param: 0xb80
+[    2.914831] [USB3][get_phy_param]usb3_phy_host_cr_param: 0x980
+[    2.914839] [USB3][get_phy_param]usb3_phy_tx_vboost_lvl: 5
+[    2.914864] [USB3][get_resource]this is asic platform (fpga flag 0)
+[    2.914871] [USB3][create_attr_file]+
+[    2.914940] [USB3][create_attr_file]-
+[    2.914949] [USB3][hi3660_usb3phy_init]+
+[    2.940471] [USB3][config_femtophy_param]set hs phy param 0x1c466e3 for device
+[    2.941000] [USB3][config_femtophy_param]set ss phy rx equalization 0xb80
+[    2.941978] [USB3][config_femtophy_param]set ss RX_SCOPE_VDCC 0x1
+[    2.941987] [USB3][config_femtophy_param]set ss phy tx vboost lvl 0x5
+[    2.941995] [USB3][set_hisi_dwc3_power_flag]set hisi_dwc3_power_flag 1
+[    2.942002] [USB3][hi3660_usb3phy_init]-
+[    2.942517] [dwc3_otg_init]+
+[    2.942528] DWC3_OCFG:\x090x0
+[    2.942535] DWC3_OCTL:\x090x40
+[    2.942542] DWC3_OEVT:\x090x80000000
+[    2.942549] DWC3_OEVTEN:\x090x0
+[    2.942556] DWC3_OSTS:\x090x19
+[    2.942563] DWC3_BCFG:\x090x0
+[    2.942569] DWC3_BCEVT:\x090x0
+[    2.942576] DWC3_BCEVTEN:\x090x0
+[    2.942583] [dwc3_otg_init]-
+[    2.942613] dwc3 ff100000.dwc3: dwc3_host_init if otg, otg will do device_add.
+[    2.945111] [USB3][hisi_dwc3_wake_lock]usb otg wake lock
+[    2.945124] [USB3][hisi_dwc3_probe]init state: OFF
+[    2.945132] [USB3][hisi_usb_otg_event]hisi_usb_otg_event in:1
+[    2.945140] [USB3][hisi_usb_otg_event]hisi_usb_otg_event in otg:1
+[    2.945147] [USB3][hisi_usb_otg_event]event: 1
+[    2.945165] [USB3][hisi_dwc3_probe]-
+[    2.945176] [USB3][event_work]+
+[    2.945191] [USB3][handle_event][handle_event] type: 1
+[    2.945202] [dwc3_otg_work]+\x0a evt = 4
+[    2.945211] [dwc3_otg_stop_peripheral]+
+[    2.945221] [dwc3_otg_stop_peripheral]-
+[    2.945229] [dwc3_suspend_device] +
+[    2.945309] [dwc3_suspend_device] -
+[    2.945319] [dwc3_otg_work]-
+[    2.945328] [USB3][hisi_dwc3_wake_unlock]usb otg wake unlock
+[    2.945340] [USB3][handle_event]hisi usb status: DEVICE -> OFF
+[    2.945348] [USB3][event_work]-
+[    2.945576] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    2.945585] ehci-pci: EHCI PCI platform driver
+[    2.945623] ehci-platform: EHCI generic platform driver
+[    2.945751] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    2.945767] ohci-pci: OHCI PCI platform driver
+[    2.945801] ohci-platform: OHCI generic platform driver
+[    2.946148] usbcore: registered new interface driver cdc_acm
+[    2.946156] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    2.946188] usbcore: registered new interface driver usb-storage
+[    2.946260] usbcore: registered new interface driver usbserial
+[    2.946294] usbcore: registered new interface driver usbserial_generic
+[    2.946328] usbserial: USB Serial support registered for generic
+[    2.946362] usbcore: registered new interface driver ftdi_sio
+[    2.946387] usbserial: USB Serial support registered for FTDI USB Serial Device
+[    2.946411] usbcore: registered new interface driver option
+[    2.946435] usbserial: USB Serial support registered for GSM modem (1-port)
+[    2.946459] usbcore: registered new interface driver pl2303
+[    2.946484] usbserial: USB Serial support registered for pl2303
+[    2.946509] usbcore: registered new interface driver qcserial
+[    2.946534] usbserial: USB Serial support registered for Qualcomm USB modem
+[    2.946558] usbcore: registered new interface driver usb_serial_simple
+[    2.946584] usbserial: USB Serial support registered for carelink
+[    2.946610] usbserial: USB Serial support registered for zio
+[    2.946635] usbserial: USB Serial support registered for funsoft
+[    2.946659] usbserial: USB Serial support registered for flashloader
+[    2.946685] usbserial: USB Serial support registered for google
+[    2.946709] usbserial: USB Serial support registered for vivopay
+[    2.946733] usbserial: USB Serial support registered for moto_modem
+[    2.946757] usbserial: USB Serial support registered for novatel_gps
+[    2.946782] usbserial: USB Serial support registered for hp4x
+[    2.946806] usbserial: USB Serial support registered for suunto
+[    2.946832] usbserial: USB Serial support registered for siemens_mpi
+[    2.946930] gadgetfs: USB Gadget filesystem, version 24 Aug 2004
+[    2.946938] [I/hisi_pd] pd_dpm_init
+[    2.947014] [I/hisi_pd] pd_dpm_probe : +++++++++
+[    2.947079] [I/hisi_pd] pd_dpm_probe ++++\x0d\x0a\x0d
+[    2.947323] rt1711h_init (1.1.8_G): initializing...
+[    2.947340] rt1711h node found...
+[    2.947548] mousedev: PS/2 mouse device common for all mice
+[    2.948087] rtc-pl031 fff04000.rtc: rtc core: registered pl031 as rtc0
+[    2.948269] i2c /dev entries driver
+[    2.948502] usbcore: registered new interface driver uvcvideo
+[    2.948509] USB Video Class driver (1.1.1)
+[    2.948517] gspca_main: v2.14.0 registered
+[    2.949282] hi3660_thermal fff30000.tsensor: failed to register thermal sensor0: -19
+[    2.949300] hi3660_thermal fff30000.tsensor: failed to register thermal sensor1: -19
+[    2.949316] hi3660_thermal fff30000.tsensor: failed to register thermal sensor2: -19
+[    2.949331] hi3660_thermal fff30000.tsensor: failed to register thermal sensor3: -19
+[    2.949375] hi3660_thermal fff30000.tsensor: failed to register thermal sensor5: -19
+[    2.949383] hi3660_thermal fff30000.tsensor: Thermal Sensor Loaded
+[    2.949652] sp805-wdt e8a06000.watchdog: registration successful
+[    2.949766] sp805-wdt e8a07000.watchdog: registration successful
+[    2.949841] device-mapper: uevent: version 1.0.3
+[    2.949944] device-mapper: ioctl: 4.35.0-ioctl (2016-06-23) initialised: dm-devel@redhat.com
+[    2.950103] Bluetooth: HCI UART driver ver 2.3
+[    2.950114] Bluetooth: HCI UART protocol H4 registered
+[    2.950163] Bluetooth: HCI UART protocol LL registered
+[    2.950193] usbcore: registered new interface driver btusb
+[    2.951762] DT idle-states: /cpus/idle-states/cpu-sleep idle state not valid, bailing out
+[    2.953242] sdhci: Secure Digital Host Controller Interface driver
+[    2.953251] sdhci: Copyright(c) Pierre Ossman
+[    2.953294] Synopsys Designware Multimedia Card Interface Driver
+[    2.953813] dwmmc_k3 ff37f000.dwmmc1: fifo-depth property not found, using value of FIFOTH register as default
+[    2.955949] dwmmc_k3 ff37f000.dwmmc1: IDMAC supports 64-bit address mode.
+[    2.956000] dwmmc_k3 ff37f000.dwmmc1: Using internal DMA controller.
+[    2.956008] dwmmc_k3 ff37f000.dwmmc1: Version ID is 270a
+[    2.956036] dwmmc_k3 ff37f000.dwmmc1: DW MMC controller at irq 55,32 bit host data width,256 deep fifo
+[    2.956195] dwmmc_k3 ff37f000.dwmmc1: Got CD GPIO
+[    2.978737] mmc_host mmc0: Bus speed (slot 0) = 400000Hz (slot req 400000Hz, actual 400000HZ div = 0)
+[    2.997351] dwmmc_k3 ff37f000.dwmmc1: 1 slots initialized
+[    2.997783] dwmmc_k3 ff3ff000.dwmmc2: fifo-depth property not found, using value of FIFOTH register as default
+[    3.000141] dwmmc_k3 ff3ff000.dwmmc2: IDMAC supports 64-bit address mode.
+[    3.002398] dwmmc_k3 ff3ff000.dwmmc2: Using internal DMA controller.
+[    3.002413] dwmmc_k3 ff3ff000.dwmmc2: Version ID is 270a
+[    3.002471] dwmmc_k3 ff3ff000.dwmmc2: DW MMC controller at irq 56,32 bit host data width,256 deep fifo
+[    3.003103] sdhci-pltfm: SDHCI platform and OF driver helper
+[    3.011979] ledtrig-cpu: registered to indicate activity on CPUs
+[    3.012391] hidraw: raw HID events driver (C) Jiri Kosina
+[    3.015317] usbcore: registered new interface driver usbhid
+[    3.015342] usbhid: USB HID core driver
+[    3.015583] ashmem: initialized
+[    3.015711] nanohub: loaded; ret=0
+[    3.016161] hi6220-serial-debug fff32000.fiq-debugger: No signal IRQ, error=-6
+[    3.016182] hi6220-serial-debug fff32000.fiq-debugger: No wakeup IRQ, error=-6
+[    3.145725] mmc_host mmc0: Bus speed (slot 0) = 200000000Hz (slot req 200000000Hz, actual 200000000HZ div = 0)
+[    3.207305] ufshcd-hi3660 ff3b0000.ufs: ufshcd_read_desc_param: Failed reading descriptor. desc_id 0 param_offset 0 buff_len 31 ret 0
+[    3.207318] ufshcd-hi3660 ff3b0000.ufs: ufs_get_device_info: Failed reading Device Desc. err = -22
+[    3.207331] ufshcd-hi3660 ff3b0000.ufs: ufs_advertise_fixup_device: Failed getting device info. err = -22
+[    3.209718] ufs final power mode: gear = 3, lane = 1, pwr = 1, rate = 2
+[    3.209731] ufshcd-hi3660 ff3b0000.ufs: set TX_EQUALIZER 3.5db
+[    3.212130] ufshcd-hi3660 ff3b0000.ufs: check TX_EQUALIZER DB value lane0 = 0x1
+[    3.212288] ufshcd-hi3660 ff3b0000.ufs: ufshcd_find_max_sup_active_icc_level: Regulator capability was not set, actvIccLevel=0
+[    3.214596] scsi 0:0:0:49488: scsi_add_lun: correcting incorrect peripheral device type 0x0 for W-LUN 0x            c150hN
+[    3.214613] scsi 0:0:0:49488: Well-known LUN    SAMSUNG  KLUBG4G1CE-B0B1  1100 PQ: 0 ANSI: 6
+[    3.321251] scsi 0:0:0:49456: scsi_add_lun: correcting incorrect peripheral device type 0x0 for W-LUN 0x            c130hN
+[    3.321258] scsi 0:0:0:49456: Well-known LUN    SAMSUNG  KLUBG4G1CE-B0B1  1100 PQ: 0 ANSI: 6
+[    3.386867] scsi 0:0:0:49476: scsi_add_lun: correcting incorrect peripheral device type 0x0 for W-LUN 0x            c144hN
+[    3.386884] scsi 0:0:0:49476: Well-known LUN    SAMSUNG  KLUBG4G1CE-B0B1  1100 PQ: 0 ANSI: 6
+[    3.437234] scsi 0:0:0:0: Direct-Access     SAMSUNG  KLUBG4G1CE-B0B1  1100 PQ: 0 ANSI: 6
+[    3.498098] sd 0:0:0:0: [sda] 1024 4096-byte logical blocks: (4.19 MB/4.00 MiB)
+[    3.498110] sd 0:0:0:0: [sda] 16384-byte physical blocks
+[    3.499080] sd 0:0:0:0: [sda] Write Protect is off
+[    3.499132] sd 0:0:0:0: [sda] Mode Sense: 00 32 00 10
+[    3.499460] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    3.499464] scsi 0:0:0:1: Direct-Access     SAMSUNG  KLUBG4G1CE-B0B1  1100 PQ: 0 ANSI: 6
+[    3.500614] random: fast init done
+[    3.502554] sd 0:0:0:0: [sda] Attached SCSI disk
+[    3.544957] sd 0:0:0:1: [sdb] 1024 4096-byte logical blocks: (4.19 MB/4.00 MiB)
+[    3.544959] sd 0:0:0:1: [sdb] 16384-byte physical blocks
+[    3.545352] scsi 0:0:0:2: Direct-Access     SAMSUNG  KLUBG4G1CE-B0B1  1100 PQ: 0 ANSI: 6
+[    3.545470] sd 0:0:0:1: [sdb] Write Protect is off
+[    3.545473] sd 0:0:0:1: [sdb] Mode Sense: 00 32 00 10
+[    3.545890] sd 0:0:0:1: [sdb] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    3.548122] sd 0:0:0:1: [sdb] Attached SCSI disk
+[    3.581399] sd 0:0:0:2: [sdc] 2048 4096-byte logical blocks: (8.39 MB/8.00 MiB)
+[    3.581401] sd 0:0:0:2: [sdc] 16384-byte physical blocks
+[    3.581448] scsi 0:0:0:3: Direct-Access     SAMSUNG  KLUBG4G1CE-B0B1  1100 PQ: 0 ANSI: 6
+[    3.581811] sd 0:0:0:2: [sdc] Write Protect is off
+[    3.581813] sd 0:0:0:2: [sdc] Mode Sense: 00 32 00 10
+[    3.581903] sd 0:0:0:2: [sdc] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    3.583828] Alternate GPT is invalid, using primary GPT.
+[    3.583835] sdc: sdc1
+[    3.584950] sd 0:0:0:2: [sdc] Attached SCSI disk
+[    3.625534] sd 0:0:0:3: [sdd] 7805952 4096-byte logical blocks: (32.0 GB/29.8 GiB)
+[    3.625536] sd 0:0:0:3: [sdd] 16384-byte physical blocks
+[    3.626196] sd 0:0:0:3: [sdd] Write Protect is off
+[    3.626198] sd 0:0:0:3: [sdd] Mode Sense: 00 32 00 10
+[    3.626331] sd 0:0:0:3: [sdd] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    3.628443] Alternate GPT is invalid, using primary GPT.
+[    3.628455] sdd: sdd1 sdd2 sdd3 sdd4 sdd5 sdd6 sdd7 sdd8 sdd9 sdd10 sdd11 sdd12 sdd13
+[    3.630323] sd 0:0:0:3: [sdd] Attached SCSI disk
+[    3.640374] dwmmc_k3 ff37f000.dwmmc1: tuning ok best_clksmpl 15 tuning_sample_flag cf3fff3f
+[    3.640405] mmc0: new ultra high speed SDR104 SDHC card at address 0007
+[    3.642050] mmcblk0: mmc0:0007 SD16G 14.4 GiB 
+[    3.646520] mmcblk0: p1 p2 p3 < p5 p6 > p4
+[    6.315942] console [ttyFIQ0] enabled
+[    6.319779] Registered fiq debugger ttyFIQ0
+[    6.324431] hisi_ddr_devfreq ddr_devfreq: init success
+[    6.329904] optee: probing for conduit method from DT.
+[    6.335109] optee: api uid mismatch
+[    6.338766] hifi_misc [E][372307]:hifi_check_img_loaded:1472: hifi img is loaded fail: 0xb7ff67ff.
+[    6.349555] hifi pdev name[hifidsp].
+[    6.353220] DRV_IPCIntInit begin.
+[    6.356573] DRV_IPCIntInit line = 220
+[    6.360278] BSP_DRV_IPCIntInit end.
+[    6.363809] func = mailbox_init, line = 695 baseaddr = 0x8b5f9800
+[    6.369985] mem_remap_type: phys_addr:0x8b5f9800 size:0x00010000 npages:17 vaddr:ffffff800b884800 offset:0x00000800
+[    6.380550] i = 0, head_addr = 0xffffff800b8848f0, data_addr = 0xffffff800b887cb0
+[    6.388121] i = 1, head_addr = 0xffffff800b884850, data_addr = 0xffffff800b884cb0
+[    6.395695] i = 2, head_addr = 0xffffff800b884918, data_addr = 0xffffff800b887cb0
+[    6.403267] i = 3, head_addr = 0xffffff800b884878, data_addr = 0xffffff800b8864b0
+[    6.410841] <<<<<<<<<<<<<<mailbox_create_box cpu_id = 0>>>>>>>>>>>>>>
+[    6.417361] ******************func = mailbox_init_all_handle line = 530 src_id = 1 dst_id = 4******************
+[    6.427573] ******************func = mailbox_init_all_handle line = 530 src_id = 0 dst_id = 4******************
+[    6.437786] ******************func = mailbox_init_all_handle line = 530 src_id = 4 dst_id = 1******************
+[    6.447997] ******************func = mailbox_init_all_handle line = 530 src_id = 4 dst_id = 0******************
+[    6.459445] mb init OK!
+[    6.462522] mb->local_id = 0 dst_id = 0
+[    6.466409] hifi_misc [I][376489]:ap_ipc_int_init:914: Enter ap_ipc_int_init
+[    6.473543] hifi_misc [I][376723]:ap_ipc_int_init:919: Exit ap_ipc_int_init
+[    6.480690] usbcore: registered new interface driver snd-usb-audio
+[    6.487540] hisi_i2s e804f800.hisi_i2s: Registered as hisi_i2s
+[    6.493535] u32 classifier
+[    6.496269] Actions configured
+[    6.499719] Netfilter messages via NETLINK v0.30.
+[    6.504797] nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+[    6.511319] ctnetlink v0.93: registering with nfnetlink.
+[    6.517075] xt_time: kernel timezone is -0000
+[    6.521853] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    6.527308] arp_tables: arp_tables: (C) 2002 David S. Miller
+[    6.533309] Initializing XFRM netlink socket
+[    6.537695] NET: Registered protocol family 10
+[    6.542965] mip6: Mobile IPv6
+[    6.545982] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[    6.551883] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    6.558146] NET: Registered protocol family 17
+[    6.562654] NET: Registered protocol family 15
+[    6.567172] Bridge firewalling registered
+[    6.571615] Bluetooth: RFCOMM TTY layer initialized
+[    6.576561] Bluetooth: RFCOMM socket layer initialized
+[    6.581770] Bluetooth: RFCOMM ver 1.11
+[    6.585570] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+[    6.591564] Bluetooth: HIDP socket layer initialized
+[    6.596585] 8021q: 802.1Q VLAN Support v1.8
+[    6.600921] 9pnet: Installing 9P2000 support
+[    6.605803] Registered cp15_barrier emulation handler
+[    6.611185] Registered setend emulation handler
+[    6.615953] registered taskstats version 1
+[    6.621795] Btrfs loaded, crc32c=crc32c-arm64-hw
+[    6.632166] ffd74000.serial: ttyAMA3 at MMIO 0xffd74000 (irq = 21, base_baud = 0) is a PL011 rev2
+[    6.641451] fdf01000.serial: ttyAMA4 at MMIO 0xfdf01000 (irq = 22, base_baud = 0) is a PL011 rev2
+[    6.650540] serial serial0: tty port ttyAMA4 registered
+[    6.655995] uart-pl011 fdf01000.serial: no DMA platform data
+[    6.656067] ssp-pl022 ffd68000.spi: ARM PL022 driver, device ID: 0x00041022
+[    6.656095] ssp-pl022 ffd68000.spi: mapped registers from 0x00000000ffd68000 to ffffff800b8f2000
+[    6.656129] ssp-pl022 ffd68000.spi: setup for DMA on RX dma0chan0, TX dma0chan1
+[    6.656827] ssp-pl022 ff3b3000.spi: ARM PL022 driver, device ID: 0x00041022
+[    6.656851] ssp-pl022 ff3b3000.spi: mapped registers from 0x00000000ff3b3000 to ffffff800b8f4000
+[    6.656877] ssp-pl022 ff3b3000.spi: setup for DMA on RX dma0chan2, TX dma0chan3
+[    6.657927] rt1711_i2c_probe
+[    6.657929] I2C functionality : OK...
+[    6.669291] rt_parse_dt
+[    6.669300] rt1711h_chipID = 0x2171
+[    6.669305] regmap_device_register: name = rt1711-4e
+[    6.669328] rt_regmap_rt1711-4e: rt register cache data init
+[    6.669333] rt_regmap_rt1711-4e: cache cata init successfully
+[    6.669415] tcpc_device_register register tcpc device (type_c_port0)
+[    6.669470] [I/hisi_pd] tcpc_device_register register_pd_wake_unlock_notifier OK
+[    6.669471] PD Timer number = 37
+[    6.669836] tcpci_timer_init : init OK
+[    6.670237] pd_parse_pdata
+[    6.670244] pd_parse_pdata src pdo data =
+[    6.670245] pd_parse_pdata 0: 0x00019064
+[    6.670247] pd_parse_pdata snk pdo data =
+[    6.670249] pd_parse_pdata 0: 0x000190c8
+[    6.670250] pd_parse_pdata 1: 0x0002d0c8
+[    6.670252] pd_parse_pdata id vdos data =
+[    6.670253] pd_parse_pdata 0: 0xd00029cf
+[    6.670254] pd_parse_pdata 1: 0x00000000
+[    6.670255] pd_parse_pdata 2: 0x00010000
+[    6.670258] dpm_caps: local_dr_power
+[    6.670259] dpm_caps: local_dr_data
+[    6.670261] dpm_caps: local_ext_power
+[    6.670263] dpm_caps: local_usb_comm
+[    6.670264] dpm_caps: local_usb_suspend
+[    6.670266] dpm_caps: local_high_cap
+[    6.670267] dpm_caps: local_give_back
+[    6.670268] dpm_caps: local_no_suspend
+[    6.670269] dpm_caps: local_vconn_supply
+[    6.670271] dpm_caps: attemp_discover_cable_dfp
+[    6.670272] dpm_caps: attemp_enter_dp_mode
+[    6.670273] dpm_caps: attemp_discover_cable
+[    6.670275] dpm_caps: attemp_discover_id
+[    6.670277] dpm_caps: pr_reject_as_source
+[    6.670278] dpm_caps: pr_reject_as_sink
+[    6.670279] dpm_caps: pr_check_gp_source
+[    6.670280] dpm_caps: pr_check_gp_sink
+[    6.670281] dpm_caps: dr_reject_as_dfp
+[    6.670283] dpm_caps: dr_reject_as_ufp
+[    6.670284] dpm_caps: snk_prefer_low_voltage
+[    6.670285] dpm_caps: snk_ignore_mismatch_current
+[    6.670287] dpm_caps = 0xc010c10b
+[    6.670289] [I/hisi_pd] PE:pd_core_init\x0d
+[    6.693010] rt1711_init_alert name = type_c_port0
+[    6.693014] rt1711_init_alert gpio # = 291
+[    6.693026] GPIO requested...
+[    6.693034] rt1711_init_alert : IRQ number = 291
+[    6.693036] rt1711_init_alert : irq initialized...
+[    6.693628] IRQF_NO_THREAD Test\x0d
+[    6.752873] [I/hisi_pd] [TCPC-I]SkipAlert:0x0000\x0d
+[    6.802148] [I/hisi_pd] TPC-I:typec_init: DRP\x0d
+[    6.813030] [I/GPIO_HUB] gpio_hub_change_typec_power: set typec vbus gpio to 0
+[    6.813032] [USB3][hisi_usb_otg_event]hisi_usb_otg_event in:1
+[    6.813033] [USB3][hisi_usb_otg_event]hisi_usb_otg_event in otg:1
+[    6.813040] [E/GPIO_HUB] gpio_hub_switch_to_hub: switch to hub
+[    6.813041] [USB3][hisi_usb_otg_event]hisi_usb_otg_event in:2
+[    6.813042] [USB3][hisi_usb_otg_event]hisi_usb_otg_event in otg:2
+[    6.813044] [USB3][hisi_usb_otg_event]event: 2
+[    6.813050] [I/hisi_pd] TPC-I:** Unattached.SNK\x0d
+[    6.813051] [E/hisi_pd] typec_wait_ps_change: typec_wait_ps_change!!!+++++++++++
+[    6.813052] [E/hisi_pd] typec_wait_ps_change: typec_wait_ps_change!!!-----------
+[    6.813272] [USB3][event_work]+
+[    6.813275] [USB3][handle_event][handle_event] type: 2
+[    6.813278] [USB3][set_vbus_power]set port power 1
+[    6.813282] [dwc3_otg_work]+\x0a evt = 2
+[    6.813282] [dwc3_resume_device] +
+[    6.813353] [dwc3_resume_device] -
+[    6.813353] [dwc3_otg_start_host]+
+[    6.813505] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[    6.813515] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 1
+[    6.813839] xhci-hcd xhci-hcd.0.auto: hcc params 0x0220fe65 hci version 0x110 quirks 0x00010010
+[    6.813860] xhci-hcd xhci-hcd.0.auto: irq 337, io mem 0xff100000
+[    6.814217] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    6.814219] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    6.814221] usb usb1: Product: xHCI Host Controller
+[    6.814223] usb usb1: Manufacturer: Linux 4.9.67-gf777f15 xhci-hcd
+[    6.814225] usb usb1: SerialNumber: xhci-hcd.0.auto
+[    6.814443] hub 1-0:1.0: USB hub found
+[    6.814460] hub 1-0:1.0: 1 port detected
+[    6.814605] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[    6.814609] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 2
+[    6.814655] usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+[    6.814733] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003
+[    6.814736] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    6.814738] usb usb2: Product: xHCI Host Controller
+[    6.814740] usb usb2: Manufacturer: Linux 4.9.67-gf777f15 xhci-hcd
+[    6.814741] usb usb2: SerialNumber: xhci-hcd.0.auto
+[    6.814926] hub 2-0:1.0: USB hub found
+[    6.814943] hub 2-0:1.0: 1 port detected
+[    6.815089] [dwc3_otg_start_host]-
+[    6.815090] [dwc3_otg_work]-
+[    6.815092] [USB3][hisi_dwc3_wake_lock]usb otg wake lock
+[    6.815095] [USB3][handle_event]hisi usb_status: OFF -> HOST
+[    6.815097] [USB3][event_work]-
+[    6.820573] tcpc_device_irq_enable : tcpc irq enable OK!
+[    6.820575] rt1711_i2c_probe probe OK!
+[    6.821043] [I/hisi_pd] TPC-I:[CC_Alert] 5/0\x0d
+[    6.821053] [I/hisi_pd] TPC-I:** AttachWait.SNK\x0d
+[    6.827605] [drm] dss irq = 70.
+[    6.827606] [drm] dss_pri_clk:[400000000]->[400000000].
+[    6.827663] [drm] dss_pxl0_clk:[144000000]->[144000000].
+[    6.827669] get_domain_data_lpae:start_addr 0x8000, size 0xbfff8000 align 0x40000
+[    6.827785] [drm] host attach, client name=[adv7533], id=0
+[    6.827835] kirin-drm e8600000.dpe: bound e8601000.dsi (ops dsi_ops)
+[    6.827838] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[    6.827840] [drm] No driver support for vblank timestamp query.
+[    6.827982] [drm] client change to HDMI
+[    6.827984] [drm] num_crtc=1, num_connector=1.
+[    6.827993] [drm:drm_helper_disable_unused_functions] *ERROR* Called for atomic driver, this is not what you want.
+[    6.858621] [I/hisi_pd] [TCPC-I]ps_change=1\x0d
+[    6.933189] [I/hisi_pd] TPC-I:[CC_Alert] 0/0\x0d
+[    6.933198] [E/hisi_pd] typec_wait_ps_change: typec_wait_ps_change!!!+++++++++++
+[    6.933206] [E/hisi_pd] typec_wait_ps_change: typec_wait_ps_change!!!-----------
+[    6.943296] [I/hisi_pd] TPC-I:[CC_Change] 0/0\x0d
+[    6.943304] [E/hisi_pd] typec_wait_ps_change: typec_wait_ps_change!!!+++++++++++
+[    6.943310] [E/hisi_pd] typec_wait_ps_change: typec_wait_ps_change!!!-----------
+[    6.943319] [E/hisi_pd] typec_wait_ps_change: typec_wait_ps_change!!!+++++++++++
+[    6.943326] [E/hisi_pd] typec_wait_ps_change: typec_wait_ps_change!!!-----------
+[    6.943332] [E/hisi_pd] typec_unattached_power_entry:!!!+++++++++++
+[    6.943340] [E/hisi_pd] typec_unattached_power_entry:!!!-----------
+[    6.943347] [I/hisi_pd] TPC-I:** Unattached.SRC\x0d
+[    7.003766] [I/hisi_pd] TPC-I:** Unattached.SNK\x0d
+[    7.140798] usb 1-1: new high-speed USB device number 2 using xhci-hcd
+[    7.283835] usb 1-1: New USB device found, idVendor=0424, idProduct=2734
+[    7.283837] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    7.283839] usb 1-1: Product: USB2734
+[    7.283841] usb 1-1: Manufacturer: Microchip Tech
+[    7.295275] hub 1-1:1.0: USB hub found
+[    7.295318] hub 1-1:1.0: 5 ports detected
+[    7.362608] kirin-drm e8600000.dpe: fb0: dss frame buffer device
+[    7.384601] [drm] Initialized kirin 1.0.0 20170309 on minor 0
+[    7.390801] dwmmc_k3 ff3ff000.dwmmc2: fifo-depth property not found, using value of FIFOTH register as default
+[    7.403055] dwmmc_k3 ff3ff000.dwmmc2: IDMAC supports 64-bit address mode.
+[    7.404477] usb 2-1: new SuperSpeed USB device number 2 using xhci-hcd
+[    7.416616] dwmmc_k3 ff3ff000.dwmmc2: Using internal DMA controller.
+[    7.423054] dwmmc_k3 ff3ff000.dwmmc2: Version ID is 270a
+[    7.425456] usb 2-1: New USB device found, idVendor=0424, idProduct=5734
+[    7.425471] usb 2-1: New USB device strings: Mfr=2, Product=3, SerialNumber=0
+[    7.425482] usb 2-1: Product: USB5734
+[    7.425493] usb 2-1: Manufacturer: Microchip Tech
+[    7.439455] hub 2-1:1.0: USB hub found
+[    7.439570] hub 2-1:1.0: 5 ports detected
+[    7.458786] dwmmc_k3 ff3ff000.dwmmc2: DW MMC controller at irq 56,32 bit host data width,128 deep fifo
+[    7.493563] hci-ti serial0-0: Direct firmware load for ti-connectivity/TIInit_11.8.32.bts failed with error -2
+[    7.503779] hci-ti serial0-0: Falling back to user helper
+[    7.566705] mmc_host mmc1: Bus speed (slot 0) = 400000Hz (slot req 400000Hz, actual 400000HZ div = 0)
+[    7.592702] dwmmc_k3 ff3ff000.dwmmc2: 1 slots initialized
+[    7.599081] hisi_i2s e804f800.hisi_i2s: Failed to get DMA channel capabilities, falling back to period counting: -6
+[    7.609673] asoc-simple-card soc:sound: hdmi-hifi.0 <-> e804f800.hisi_i2s mapping ok
+[    7.616397] usb 1-1.5: new high-speed USB device number 3 using xhci-hcd
+[    7.624505] hisi_i2s e804f800.hisi_i2s: Failed to get DMA channel capabilities, falling back to period counting: -6
+[    7.635179] hisi_i2s e804f800.hisi_i2s: Failed to get DMA channel capabilities, falling back to period counting: -6
+[    7.645751] asoc-simple-card soc:sound: bt-sco-pcm <-> e804f800.hisi_i2s mapping ok
+[    7.656770] otg_wakelock_init: No USB transceiver found
+[    7.660071] dwmmc_k3 ff3ff000.dwmmc2: card claims to support voltages below defined range
+[    7.670729] input: keys as /devices/platform/keys/input/input0
+[    7.673180] mmc_host mmc1: Bus speed (slot 0) = 25000000Hz (slot req 25000000Hz, actual 25000000HZ div = 0)
+[    7.676118] mmc1: new SDIO card at address 0001
+[    7.677172] wl18xx_driver wl18xx.2.auto: Direct firmware load for ti-connectivity/wl18xx-conf.bin failed with error -2
+[    7.677175] wl18xx_driver wl18xx.2.auto: Falling back to user helper
+[    7.708692] rtc-pl031 fff04000.rtc: setting system clock to 1970-01-01 00:00:14 UTC (14)
+[    7.717114] ALSA device list:
+[    7.717355] usb 1-1.5: New USB device found, idVendor=0424, idProduct=2740
+[    7.717369] usb 1-1.5: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    7.717381] usb 1-1.5: Product: Hub Controller
+[    7.717392] usb 1-1.5: Manufacturer: Microchip Tech
+[    7.743891] #0: hikey-i2s2
+[    7.747153] Freeing unused kernel memory: 1152K
+[    7.753984] init: init first stage started!
+[    7.758314] init: Using Android DT directory /proc/device-tree/firmware/android/
+[    7.765854] init: First stage mount skipped (missing/incompatible fstab in device tree)
+[    7.773968] init: Skipped setting INIT_AVB_VERSION (not in recovery mode)
+[    7.780896] init: Loading SELinux policy
+[    7.788001] SELinux: 8192 avtab hash slots, 17146 rules.
+[    7.796852] SELinux: 8192 avtab hash slots, 17146 rules.
+[    7.802233] SELinux:  1 users, 4 roles, 1238 types, 0 bools, 1 sens, 1024 cats
+[    7.809561] SELinux:  93 classes, 17146 rules
+[    7.815095] SELinux:  Completing initialization.
+[    7.819770] SELinux:  Setting up existing superblocks.
+[    7.879919] audit: type=1403 audit(14.663:2): policy loaded auid=4294967295 ses=4294967295
+[    7.888475] selinux: SELinux: Loaded policy from /sepolicy\x0a
+[    7.895886] audit: type=1404 audit(14.683:3): enforcing=1 old_enforcing=0 auid=4294967295 ses=4294967295
+[    7.918354] selinux: SELinux: Loaded file_contexts\x0a
+[    7.928033] init: init second stage started!
+[    7.937861] init: Using Android DT directory /proc/device-tree/firmware/android/
+[    7.945926] init: Init cannot set 'ro.boot.hardware' to 'HiKey960': Read-only property was already set
+[    7.956527] selinux: SELinux: Loaded file_contexts\x0a
+[    7.962891] init: Running restorecon...
+[    7.968165] selinux: SELinux:  Could not stat /dev/block: No such file or directory.\x0a
+[    7.977609] init: waitid failed: No child processes
+[    7.982586] init: Couldn't load property file '/system/etc/prop.default': open() failed: No such file or directory: No such file or directory
+[    7.995453] init: Couldn't load property file '/prop.default': open() failed: No such file or directory: No such file or directory
+[    8.007666] init: Couldn't load property file '/product/build.prop': open() failed: No such file or directory: No such file or directory
+[    8.033975] cgroup: init (1) created nested cgroup for controller "memory" which has incomplete hierarchy support. Nested cgroups may change behavior in the future.
+[    8.039101] ueventd: ueventd started!
+[    8.040193] selinux: SELinux: Loaded file_contexts\x0a
+[    8.040220] ueventd: Parsing file /ueventd.rc...
+[    8.040532] ueventd: Parsing file /vendor/ueventd.rc...
+[    8.040547] ueventd: Unable to read config file '/vendor/ueventd.rc': open() failed: No such file or directory
+[    8.040556] ueventd: Parsing file /odm/ueventd.rc...
+[    8.040567] ueventd: Unable to read config file '/odm/ueventd.rc': open() failed: No such file or directory
+[    8.040601] ueventd: Parsing file /ueventd.hikey960.rc...
+[    8.064926] ueventd: firmware: loading 'ti-connectivity/wl18xx-conf.bin' for '/devices/platform/soc/ff3ff000.dwmmc2/mmc_host/mmc1/mmc1:0001/mmc1:0001:2/wl18xx.2.auto/firmware/ti-connectivity!wl18xx-conf.bin'
+[    8.069606] ueventd: firmware: loading 'ti-connectivity/TIInit_11.8.32.bts' for '/devices/platform/soc/fdf01000.serial/serial0/serial0-0/firmware/ti-connectivity!TIInit_11.8.32.bts'
+[    8.134443] cgroup: "memory" requires setting use_hierarchy to 1 on the root
+[    8.141872] audit: type=1400 audit(14.931:4): avc:  denied  { create } for  pid=1 comm="init" name="cgroup.procs" scontext=u:r:init:s0 tcontext=u:object_r:cgroup:s0 tclass=file permissive=0
+[    8.164696] audit: type=1400 audit(14.951:5): avc:  denied  { create } for  pid=1 comm="init" name="cpu.rt_period_us" scontext=u:r:init:s0 tcontext=u:object_r:cgroup:s0 tclass=file permissive=0
+[    8.182243] audit: type=1400 audit(14.971:6): avc:  denied  { create } for  pid=1 comm="init" name="cpu.rt_runtime_us" scontext=u:r:init:s0 tcontext=u:object_r:cgroup:s0 tclass=file permissive=0
+[    8.201324] audit: type=1400 audit(14.987:7): avc:  denied  { create } for  pid=1 comm="init" name="cpus" scontext=u:r:init:s0 tcontext=u:object_r:cgroup:s0 tclass=file permissive=0
+[    8.218375] audit: type=1400 audit(15.007:8): avc:  denied  { create } for  pid=1 comm="init" name="mems" scontext=u:r:init:s0 tcontext=u:object_r:cgroup:s0 tclass=file permissive=0
+[    8.235055] audit: type=1400 audit(15.023:9): avc:  denied  { create } for  pid=1 comm="init" name="cpus" scontext=u:r:init:s0 tcontext=u:object_r:cgroup:s0 tclass=file permissive=0
+[    8.252020] audit: type=1400 audit(15.039:10): avc:  denied  { create } for  pid=1 comm="init" name="mems" scontext=u:r:init:s0 tcontext=u:object_r:cgroup:s0 tclass=file permissive=0
+[    8.268738] audit: type=1400 audit(15.059:11): avc:  denied  { create } for  pid=1 comm="init" name="cpus" scontext=u:r:init:s0 tcontext=u:object_r:cgroup:s0 tclass=file permissive=0
+[    8.287579] Registered swp emulation handler
+[    8.303708] watchdogd: watchdogd started (interval 10, margin 20)!
+[    8.310785] EXT4-fs (sdd10): mounted filesystem with ordered data mode. Opts: (null)
+[    8.319893] EXT4-fs (sdd5): Ignoring removed nomblk_io_submit option
+[    8.329547] EXT4-fs (sdd5): recovery complete
+[    8.334942] EXT4-fs (sdd5): mounted filesystem with ordered data mode. Opts: errors=remount-ro,nomblk_io_submit
+[    8.372154] Bluetooth: hci0: change remote baud rate command in firmware
+[    8.413506] e2fsck: e2fsck 1.43.3 (04-Sep-2016)\x0a
+[    8.419676] e2fsck: /system/bin/e2fsck: Permission denied while trying to open /dev/block/sdd5\x0a
+[    8.429963] e2fsck: \x0a
+[    8.434025] e2fsck: You must have r/w access to the filesystem or be root\x0a
+[    8.442456] e2fsck: e2fsck terminated by exit(8)\x0a
+[    8.451122] EXT4-fs (sdd5): mounted filesystem with ordered data mode. Opts: discard,noauto_da_alloc,data=ordered,user_xattr,discard,barrier=1
+[    8.465223] EXT4-fs (sdd13): Ignoring removed nomblk_io_submit option
+[    8.475971] EXT4-fs (sdd13): recovery complete
+[    8.481070] EXT4-fs (sdd13): mounted filesystem with ordered data mode. Opts: errors=remount-ro,nomblk_io_submit
+[    8.522539] e2fsck: e2fsck 1.43.3 (04-Sep-2016)\x0a
+[    8.528670] e2fsck: /system/bin/e2fsck: Permission denied while trying to open /dev/block/sdd13\x0a
+[    8.539067] e2fsck: \x0a
+[    8.542854] e2fsck: You must have r/w access to the filesystem or be root\x0a
+[    8.551250] e2fsck: e2fsck terminated by exit(8)\x0a
+[    8.560336] EXT4-fs (sdd13): mounted filesystem with ordered data mode. Opts: discard,noauto_da_alloc,data=ordered,user_xattr,discard,barrier=1
+[    8.615446] wlcore: wl18xx HW: 183x or 180x, PG 2.2 (ROM 0x11)
+[    8.628049] wlcore: loaded
+[    8.631120] logd.auditd: start
+[    8.634239] logd.klogd: 8581918748
+[    8.700448] type=1400 audit(15.483:34): avc: denied { create } for pid=1 comm="init" name="cgroup.procs" scontext=u:r:init:s0 tcontext=u:object_r:cgroup:s0 tclass=file permissive=0
+[    8.737354] type=1400 audit(15.483:34): avc: denied { create } for pid=1 comm="init" name="cgroup.procs" scontext=u:r:init:s0 tcontext=u:object_r:cgroup:s0 tclass=file permissive=0
+[    8.753909] type=1400 audit(15.523:35): avc: denied { search } for pid=1540 comm="init" name="wifi" dev="sdd13" ino=131093 scontext=u:r:vendor_init:s0 tcontext=u:object_r:wifi_data_file:s0 tclass=dir permissive=0
+[    8.760061] logd.daemon: reinit
+[    8.777257] type=1400 audit(15.523:35): avc: denied { search } for pid=1540 comm="init" name="wifi" dev="sdd13" ino=131093 scontext=u:r:vendor_init:s0 tcontext=u:object_r:wifi_data_file:s0 tclass=dir permissive=0
+[    8.785571] file system registered
+[    8.802089] type=1400 audit(15.527:36): avc: denied { create } for pid=1 comm="init" name="cgroup.procs" scontext=u:r:init:s0 tcontext=u:object_r:cgroup:s0 tclass=file permissive=0
+[    8.814931] read descriptors
+[    8.814942] read strings
+[    8.819731] dwc3 ff100000.dwc3: failed to enable ep0out
+[    8.829289] healthd: unable to get HAL interface, using defaults
+[    8.829574] healthd-common: wakealarm_init: timerfd_create failed
+[    8.829649] healthd: Could not open /sys/class/power_supply
+[    8.829652] healthd: No battery devices found
+[    8.829664] healthd: battery none chg=
+[    8.986395] [drm] mode->clock(org) = 148500
+[    8.986397] [drm] dss_pxl0_clk = 144000
+[    9.055199] [drm] Expected : lane_clock = 864 M
+[    9.055202] [drm] Config : lane_clock = 864000000
+[    9.055207] [drm] PHY clock_lane and data_lane config : \x0arg_vrefsel_vcm=85\x0aclk_pre_delay=0\x0aclk_post_delay=41\x0aclk_t_hs_prepare=10\x0aclk_t_lpx=13\x0aclk_t_hs_zero=27\x0aclk_t_hs_trial=10\x0adata_pre_delay=61\x0adata_post_delay=0\x0adata_t_hs_prepare=9\x0adata_t_lpx=13\x0adata_t_hs_zero=12\x0adata_t_hs_trial=12\x0adata_t_ta_go=4\x0adata_t_ta_get=5
+[    9.055209] [drm] clk_lane_lp2hs_time=63\x0aclk_lane_hs2lp_time=58\x0adata_lane_lp2hs_time=104\x0adata_lane_hs2lp_time=19\x0aphy_stop_wait_time=53
+[    9.055434] [drm] hsa_time=33, hbp_time=111, hline_time=1650
+[    9.055435] [drm] lane_byte_clk=108000000, pixel_clk=144000000
+[    9.055447] [drm] dsi_mipi_init ok
+[   10.071262] type=1400 audit(15.559:42): avc: denied { create } for pid=1 comm="init" name="cgroup.procs" scontext=u:r:init:s0 tcontext=u:object_r:cgroup:s0 tclass=file permissive=0 duplicate messages suppressed
+[   10.090700] type=1400 audit(16.855:56): avc: denied { search } for pid=2303 comm="BootAnimation" name="oem" dev="rootfs" ino=10526 scontext=u:r:bootanim:s0 tcontext=u:object_r:camd_file:s0 tclass=dir permissive=0
+[   10.116583] random: crng init done
+[   10.364475] usb 1-1.1: new full-speed USB device number 4 using xhci-hcd
+[   10.470257] usb 1-1.1: New USB device found, idVendor=222a, idProduct=001c
+[   10.477399] usb 1-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[   10.485293] usb 1-1.1: Product: ILITEK Multi-Touch
+[   10.490529] usb 1-1.1: Manufacturer: ILITEK
+[   10.535821] input: ILITEK ILITEK Multi-Touch as /devices/platform/soc/ff200000.hisi_usb/ff100000.dwc3/xhci-hcd.0.auto/usb1/1-1/1-1.1/1-1.1:1.0/0003:222A:001C.0001/input/input1
+[   10.558165] hid-multitouch 0003:222A:001C.0001: input,hidraw0: USB HID v1.11 Device [ILITEK ILITEK Multi-Touch] on usb-xhci-hcd.0.auto-1.1/input0
+[  158.408849] [I/hisi_pd] TPC-I:[CC_Alert] 5/0\x0d
+[  158.413454] [I/hisi_pd] TPC-I:** AttachWait.SNK\x0d
+[  158.418891] [I/hisi_pd] [TCPC-I]ps_change=2\x0d
+[  158.538845] [I/hisi_pd] TPC-I:[CC_Change] 5/0\x0d
+[  158.543538] [E/hisi_pd] typec_wait_ps_change: typec_wait_ps_change!!!+++++++++++
+[  158.551254] [E/hisi_pd] typec_wait_ps_change: typec_wait_ps_change!!!-----------
+[  158.558860] [I/GPIO_HUB] gpio_hub_power_off: gpio hub hub vbus no power set success
+[  158.558860] [I/GPIO_HUB] gpio_hub_change_typec_power: typec power no change
+[  158.558870] [USB3][hisi_usb_otg_event]hisi_usb_otg_event in:3
+[  158.558878] [USB3][hisi_usb_otg_event]hisi_usb_otg_event in otg:3
+[  158.558887] [USB3][hisi_usb_otg_event]event: 3
+[  158.558910] [E/GPIO_HUB] gpio_hub_switch_to_typec: switch to typec
+[  158.558918] [USB3][hisi_usb_otg_event]hisi_usb_otg_event in:0
+[  158.558926] [USB3][hisi_usb_otg_event]hisi_usb_otg_event in otg:0
+[  158.558933] [USB3][hisi_usb_otg_event]event: 0
+[  158.558938] [USB3][hisi_usb_otg_event]schedule event_work wait:0]
+[  158.558943] [I/hisi_pd] TPC-I:** Attached.SNK\x0d
+[  158.558951] [E/hisi_pd] typec_wait_ps_change: typec_wait_ps_change!!!+++++++++++
+[  158.558958] [E/hisi_pd] typec_wait_ps_change: typec_wait_ps_change!!!-----------
+[  158.559224] [USB3][event_work]+
+[  158.559235] [USB3][handle_event][handle_event] type: 3
+[  158.559295] [USB3][set_vbus_power]set port power 0
+[  158.559326] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=3,+++
+[  158.559338] [I/hisi_pd] pd_dpm_report_pd_sink_vbus : Sink 5000 mV, 500 mA
+[  158.559346] [E/hisi_pd] pd_dpm_vbus_notifier_call: pd_dpm_vbus_notifier_call!!!,++++
+[  158.559355] [I/hisi_pd] TPC-I:Attached-> SINK\x0d
+[  158.559363] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=7,+++
+[  158.559371] [I/hisi_pd] pd_dpm_set_typec_state = 2
+[  158.559380] [I/hisi_pd] pd_dpm_set_cc_orientation cc_orientation =0
+[  158.559394] [I/hisi_pd] [TCPC-I]usb_port_attached\x0d
+[  158.559462] [I/hisi_pd] pd_dpm_report_bc12 : PD_WAKE_UNLOCK
+[  158.559475] [I/hisi_pd] pd_dpm_report_bc12 : event (4)
+[  158.559482] [E/hisi_pd] pd_dpm_vbus_notifier_call: pd_dpm_vbus_notifier_call!!!,++++
+[  158.559498] [dwc3_otg_work]+\x0a evt = 1
+[  158.559499] [dwc3_otg_stop_host]+
+[  158.559659] xhci-hcd xhci-hcd.0.auto: remove, state 4
+[  158.559708] usb usb2: USB disconnect, device number 1
+[  158.559726] usb 2-1: USB disconnect, device number 2
+[  158.559982] usb 1-1: USB disconnect, device number 2
+[  158.560002] usb 1-1.1: USB disconnect, device number 4
+[  158.564724] [I/hisi_pd] pd_dpm_report_device_attach \x0d
+[  158.574536] xhci-hcd xhci-hcd.0.auto: Host not halted after 16000 microseconds.
+[  158.574545] xhci-hcd xhci-hcd.0.auto: Host controller not halted, aborting reset.
+[  158.574669] xhci-hcd xhci-hcd.0.auto: USB bus 2 deregistered
+[  158.574712] xhci-hcd xhci-hcd.0.auto: remove, state 1
+[  158.574764] usb usb1: USB disconnect, device number 1
+[  158.613701] usb 1-1.5: USB disconnect, device number 3
+[  158.616467] xhci-hcd xhci-hcd.0.auto: USB bus 1 deregistered
+[  158.616645] [dwc3_otg_stop_host]-
+[  158.616650] [dwc3_suspend_device] +
+[  158.616811] android_work: did not send uevent (0 0           (null))
+[  158.616943] [dwc3_suspend_device] -
+[  158.616947] [dwc3_otg_work]-
+[  158.616953] [USB3][hisi_dwc3_wake_unlock]usb otg wake unlock
+[  158.616960] [USB3][handle_event]hiusb_status: HOST -> OFF
+[  158.616967] [USB3][handle_event][handle_event] type: 0
+[  158.924759] [USB3][detect_charger_type]DCD done
+[  158.934089] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=6,+++
+[  158.934098] [I/hisi_pd] pd_dpm_handle_pe_event  unkonw event \x0d
+[  158.934258] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=5,+++
+[  158.934267] Pending event is same --> ignore this event 2
+[  158.934352] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=3,+++
+[  158.952443] [USB3][detect_charger_type]Primary Detection done
+[  158.952452] [USB3][detect_charger_type]Secondary Detection done
+[  158.980674] [USB3][detect_charger_type]type: 0
+[  158.980685] [I/hisi_pd] pd_dpm_report_bc12 : event (0)
+[  158.980693] [E/hisi_pd] pd_dpm_vbus_notifier_call: pd_dpm_vbus_notifier_call!!!,++++
+[  158.980710] [dwc3_otg_work]+\x0a evt = 3
+[  158.980711] [dwc3_resume_device] +
+[  158.980988] [dwc3_resume_device] -
+[  158.980995] [dwc3_otg_start_peripheral]+
+[  158.981015] [dwc3_otg_start_peripheral]-
+[  158.981021] [dwc3_otg_work]-
+[  158.981030] [USB3][hisi_dwc3_wake_lock]usb otg wake lock
+[  158.981043] [USB3][handle_event]hisi usb status: OFF -> DEVICE
+[  158.981051] [USB3][event_work]-
+[  162.761115] android_work: sent uevent USB_STATE=CONNECTED
+[  162.766687] configfs-gadget gadget: high-speed config #1: b
+[  162.775361] android_work: sent uevent USB_STATE=CONFIGURED
+[  163.636851] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=6,+++
+[  163.636862] [I/hisi_pd] pd_dpm_handle_pe_event  unkonw event \x0d
+[  163.637030] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=5,+++
+[  163.637038] Pending event is same --> ignore this event 2
+[  163.637126] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=3,+++
+[  168.339425] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=6,+++
+[  168.345475] [I/hisi_pd] pd_dpm_handle_pe_event  unkonw event \x0d
+[  168.345622] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=5,+++
+[  168.345631] Pending event is same --> ignore this event 2
+[  168.345708] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=3,+++
+[  169.294726] android_work: sent uevent USB_STATE=DISCONNECTED
+[  169.363122] android_work: sent uevent USB_STATE=CONNECTED
+[  169.370025] android_work: sent uevent USB_STATE=DISCONNECTED
+[  169.455407] android_work: sent uevent USB_STATE=CONNECTED
+[  169.461413] configfs-gadget gadget: high-speed config #1: b
+[  169.469233] android_work: sent uevent USB_STATE=CONFIGURED
+[  173.046748] [I/hisi_pd] PE:TYPE-C Only Charger!\x0d
+[  173.046762] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=3,+++
+[  173.046775] [I/hisi_pd] pd_dpm_report_pd_sink_vbus : Sink 5000 mV, 500 mA
+[  173.046784] [E/hisi_pd] pd_dpm_vbus_notifier_call: pd_dpm_vbus_notifier_call!!!,++++
+[  173.046794] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=8,+++
+[  324.841980] [I/hisi_pd] TPC-I:[CC_Alert] 0/0\x0d
+[  324.852314] [I/hisi_pd] TPC-I:[CC_Change] 0/0\x0d
+[  324.852485] [E/hisi_pd] typec_wait_ps_change: typec_wait_ps_change!!!+++++++++++
+[  324.852493] [E/hisi_pd] typec_wait_ps_change: typec_wait_ps_change!!!-----------
+[  324.852502] [I/hisi_pd] TPC-I:** UnattachWait.PE\x0d
+[  324.852509] [I/hisi_pd] TPC-I:Attached-> NULL\x0d
+[  324.852519] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=7,+++
+[  324.852529] [I/hisi_pd] pd_dpm_set_typec_state = 1
+[  324.852543] [I/hisi_pd] [TCPC-I]usb_port_detached\x0d
+[  324.853103] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=8,+++
+[  324.853653] [I/hisi_pd] pd_dpm_report_device_detach \x0d
+[  324.853662] [E/hisi_pd] pd_dpm_vbus_notifier_call: pd_dpm_vbus_notifier_call!!!,++++
+[  324.854165] [E/hisi_pd] typec_wait_ps_change: typec_wait_ps_change!!!+++++++++++
+[  324.854173] [E/hisi_pd] typec_wait_ps_change: typec_wait_ps_change!!!-----------
+[  324.854180] [E/hisi_pd] typec_unattached_power_entry:!!!+++++++++++
+[  324.854323] [E/hisi_pd] tcpci_disable_vbus_control: !!!++++++++
+[  324.854332] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=0,+++
+[  324.854339] [E/hisi_pd] typec_unattached_power_entry:!!!-----------
+[  324.854365] [E/GPIO_HUB] gpio_hub_switch_to_hub: switch to hub
+[  324.854377] [I/GPIO_HUB] gpio_hub_change_typec_power: typec power no change
+[  324.854401] [USB3][hisi_usb_otg_event]hisi_usb_otg_event in:1
+[  324.854408] [USB3][hisi_usb_otg_event]hisi_usb_otg_event in otg:1
+[  324.854417] [USB3][hisi_usb_otg_event]event: 1
+[  324.854494] [USB3][hisi_usb_otg_event]hisi_usb_otg_event in:2
+[  324.854502] [USB3][hisi_usb_otg_event]hisi_usb_otg_event in otg:2
+[  324.854510] [USB3][hisi_usb_otg_event]event: 2
+[  324.854515] [USB3][hisi_usb_otg_event]schedule event_work wait:2]
+[  324.854520] [I/hisi_pd] TPC-I:** Unattached.SNK\x0d
+[  324.854774] [USB3][event_work]+
+[  324.854785] [USB3][handle_event][handle_event] type: 1
+[  324.854804] [dwc3_otg_work]+\x0a evt = 4
+[  324.854804] [dwc3_otg_stop_peripheral]+
+[  324.855248] [dwc3_otg_stop_peripheral]-
+[  324.855255] [dwc3_suspend_device] +
+[  324.855434] [dwc3_suspend_device] -
+[  324.855442] [dwc3_otg_work]-
+[  324.855451] [I/hisi_pd] pd_dpm_report_bc12 : PD_WAKE_UNLOCK
+[  324.855463] [I/hisi_pd] pd_dpm_report_bc12 : event (4)
+[  324.855469] [E/hisi_pd] pd_dpm_vbus_notifier_call: pd_dpm_vbus_notifier_call!!!,++++
+[  324.855477] [USB3][hisi_dwc3_wake_unlock]usb otg wake unlock
+[  324.855492] [USB3][handle_event]hisi usb status: DEVICE -> OFF
+[  324.855501] [USB3][handle_event][handle_event] type: 2
+[  324.855509] [USB3][set_vbus_power]set port power 1
+[  324.855524] [dwc3_otg_work]+\x0a evt = 2
+[  324.855524] [dwc3_resume_device] +
+[  324.855791] [dwc3_resume_device] -
+[  324.855797] [dwc3_otg_start_host]+
+[  324.856861] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[  324.856904] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 1
+[  324.862545] android_work: sent uevent USB_STATE=DISCONNECTED
+[  324.864871] xhci-hcd xhci-hcd.0.auto: hcc params 0x0220fe65 hci version 0x110 quirks 0x00010010
+[  324.864932] xhci-hcd xhci-hcd.0.auto: irq 337, io mem 0xff100000
+[  324.865365] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[  324.865378] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[  324.865389] usb usb1: Product: xHCI Host Controller
+[  324.865400] usb usb1: Manufacturer: Linux 4.9.67-gf777f15 xhci-hcd
+[  324.865412] usb usb1: SerialNumber: xhci-hcd.0.auto
+[  324.870379] hub 1-0:1.0: USB hub found
+[  324.870477] hub 1-0:1.0: 1 port detected
+[  324.871405] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[  324.871432] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 2
+[  324.871622] usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+[  324.871944] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003
+[  324.871957] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[  324.871969] usb usb2: Product: xHCI Host Controller
+[  324.871980] usb usb2: Manufacturer: Linux 4.9.67-gf777f15 xhci-hcd
+[  324.871991] usb usb2: SerialNumber: xhci-hcd.0.auto
+[  324.873590] hub 2-0:1.0: USB hub found
+[  324.873636] hub 2-0:1.0: 1 port detected
+[  324.874214] [dwc3_otg_start_host]-
+[  324.874218] [dwc3_otg_work]-
+[  324.874224] [USB3][hisi_dwc3_wake_lock]usb otg wake lock
+[  324.874231] [USB3][handle_event]hisi usb_status: OFF -> HOST
+[  324.874236] [USB3][event_work]-
+[  325.196657] usb 1-1: new high-speed USB device number 2 using xhci-hcd
+[  325.341045] usb 1-1: New USB device found, idVendor=0424, idProduct=2734
+[  325.347927] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  325.347939] usb 1-1: Product: USB2734
+[  325.347950] usb 1-1: Manufacturer: Microchip Tech
+[  325.386760] hub 1-1:1.0: USB hub found
+[  325.387123] hub 1-1:1.0: 5 ports detected
+[  325.456792] usb 2-1: new SuperSpeed USB device number 2 using xhci-hcd
+[  325.477429] usb 2-1: New USB device found, idVendor=0424, idProduct=5734
+[  325.484304] usb 2-1: New USB device strings: Mfr=2, Product=3, SerialNumber=0
+[  325.491661] usb 2-1: Product: USB5734
+[  325.495470] usb 2-1: Manufacturer: Microchip Tech
+[  325.514446] hub 2-1:1.0: USB hub found
+[  325.518649] hub 2-1:1.0: 5 ports detected
+[  325.704685] usb 1-1.1: new full-speed USB device number 3 using xhci-hcd
+[  325.808783] usb 1-1.1: New USB device found, idVendor=222a, idProduct=001c
+[  325.815899] usb 1-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  325.823730] usb 1-1.1: Product: ILITEK Multi-Touch
+[  325.828673] usb 1-1.1: Manufacturer: ILITEK
+[  325.876136] input: ILITEK ILITEK Multi-Touch as /devices/platform/soc/ff200000.hisi_usb/ff100000.dwc3/xhci-hcd.0.auto/usb1/1-1/1-1.1/1-1.1:1.0/0003:222A:001C.0002/input/input3
+[  325.898152] hid-multitouch 0003:222A:001C.0002: input,hidraw0: USB HID v1.11 Device [ILITEK ILITEK Multi-Touch] on usb-xhci-hcd.0.auto-1.1/input0
+[  325.980746] usb 1-1.5: new high-speed USB device number 4 using xhci-hcd
+[  326.087740] usb 1-1.5: New USB device found, idVendor=0424, idProduct=2740
+[  326.094874] usb 1-1.5: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  326.094886] usb 1-1.5: Product: Hub Controller
+[  326.094897] usb 1-1.5: Manufacturer: Microchip Tech
+[  327.556085] [I/hisi_pd] TPC-I:[CC_Alert] 5/0\x0d
+[  327.560715] [I/hisi_pd] TPC-I:** AttachWait.SNK\x0d
+[  327.565927] [I/hisi_pd] [TCPC-I]ps_change=2\x0d
+[  327.685852] [I/hisi_pd] TPC-I:[CC_Change] 5/0\x0d
+[  327.690474] [E/hisi_pd] typec_wait_ps_change: typec_wait_ps_change!!!+++++++++++
+[  327.690482] [E/hisi_pd] typec_wait_ps_change: typec_wait_ps_change!!!-----------
+[  327.690521] [I/GPIO_HUB] gpio_hub_power_off: gpio hub hub vbus no power set success
+[  327.690521] [I/GPIO_HUB] gpio_hub_change_typec_power: typec power no change
+[  327.690531] [USB3][hisi_usb_otg_event]hisi_usb_otg_event in:3
+[  327.690539] [USB3][hisi_usb_otg_event]hisi_usb_otg_event in otg:3
+[  327.690548] [USB3][hisi_usb_otg_event]event: 3
+[  327.690612] [E/GPIO_HUB] gpio_hub_switch_to_typec: switch to typec
+[  327.690616] [USB3][event_work]+
+[  327.690620] [USB3][hisi_usb_otg_event]hisi_usb_otg_event in:0
+[  327.690628] [USB3][handle_event][handle_event] type: 3
+[  327.690631] [USB3][hisi_usb_otg_event]hisi_usb_otg_event in otg:0
+[  327.690638] [USB3][set_vbus_power]set port power 0
+[  327.690640] [USB3][hisi_usb_otg_event]event: 0
+[  327.690647] [I/hisi_pd] pd_dpm_report_bc12 : PD_WAKE_UNLOCK
+[  327.690659] [I/hisi_pd] pd_dpm_report_bc12 : event (4)
+[  327.690667] [E/hisi_pd] pd_dpm_vbus_notifier_call: pd_dpm_vbus_notifier_call!!!,++++
+[  327.690670] [I/hisi_pd] TPC-I:** Attached.SNK\x0d
+[  327.690678] [dwc3_otg_work]+\x0a evt = 1
+[  327.690679] [E/hisi_pd] typec_wait_ps_change: typec_wait_ps_change!!!+++++++++++
+[  327.690683] [dwc3_otg_stop_host]+
+[  327.690687] [E/hisi_pd] typec_wait_ps_change: typec_wait_ps_change!!!-----------
+[  327.691041] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=3,+++
+[  327.691053] [I/hisi_pd] pd_dpm_report_pd_sink_vbus : Sink 5000 mV, 500 mA
+[  327.691061] [E/hisi_pd] pd_dpm_vbus_notifier_call: pd_dpm_vbus_notifier_call!!!,++++
+[  327.691070] [I/hisi_pd] TPC-I:Attached-> SINK\x0d
+[  327.691078] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=7,+++
+[  327.691086] [I/hisi_pd] pd_dpm_set_typec_state = 2
+[  327.691094] [I/hisi_pd] pd_dpm_set_cc_orientation cc_orientation =0
+[  327.691108] [I/hisi_pd] [TCPC-I]usb_port_attached\x0d
+[  327.691417] xhci-hcd xhci-hcd.0.auto: remove, state 4
+[  327.691504] usb usb2: USB disconnect, device number 1
+[  327.691525] usb 2-1: USB disconnect, device number 2
+[  327.691596] [I/hisi_pd] pd_dpm_report_device_attach \x0d
+[  327.703652] xhci-hcd xhci-hcd.0.auto: Host not halted after 16000 microseconds.
+[  327.703662] xhci-hcd xhci-hcd.0.auto: Host controller not halted, aborting reset.
+[  327.705863] usb 1-1: USB disconnect, device number 2
+[  327.705883] usb 1-1.1: USB disconnect, device number 3
+[  327.708082] xhci-hcd xhci-hcd.0.auto: USB bus 2 deregistered
+[  327.708127] xhci-hcd xhci-hcd.0.auto: remove, state 1
+[  327.708177] usb usb1: USB disconnect, device number 1
+[  327.741774] usb 1-1.5: USB disconnect, device number 4
+[  327.744664] xhci-hcd xhci-hcd.0.auto: USB bus 1 deregistered
+[  327.744824] [dwc3_otg_stop_host]-
+[  327.744828] [dwc3_suspend_device] +
+[  327.744998] android_work: did not send uevent (0 0           (null))
+[  327.745122] [dwc3_suspend_device] -
+[  327.745126] [dwc3_otg_work]-
+[  327.745131] [USB3][hisi_dwc3_wake_unlock]usb otg wake unlock
+[  327.745139] [USB3][handle_event]hiusb_status: HOST -> OFF
+[  327.745145] [USB3][handle_event][handle_event] type: 0
+[  328.056447] [USB3][detect_charger_type]DCD done
+[  328.066330] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=6,+++
+[  328.066339] [I/hisi_pd] pd_dpm_handle_pe_event  unkonw event \x0d
+[  328.066496] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=5,+++
+[  328.066504] Pending event is same --> ignore this event 2
+[  328.066588] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=3,+++
+[  328.088431] [USB3][detect_charger_type]Primary Detection done
+[  328.088440] [USB3][detect_charger_type]Secondary Detection done
+[  328.116421] [USB3][detect_charger_type]type: 0
+[  328.121477] [I/hisi_pd] pd_dpm_report_bc12 : event (0)
+[  328.121486] [E/hisi_pd] pd_dpm_vbus_notifier_call: pd_dpm_vbus_notifier_call!!!,++++
+[  328.121503] [dwc3_otg_work]+\x0a evt = 3
+[  328.121504] [dwc3_resume_device] +
+[  328.121789] [dwc3_resume_device] -
+[  328.121796] [dwc3_otg_start_peripheral]+
+[  328.121815] [dwc3_otg_start_peripheral]-
+[  328.121821] [dwc3_otg_work]-
+[  328.121831] [USB3][hisi_dwc3_wake_lock]usb otg wake lock
+[  328.121844] [USB3][handle_event]hisi usb status: OFF -> DEVICE
+[  328.121852] [USB3][event_work]-
+[  328.121864] [USB3][event_work]+
+[  328.121870] [USB3][event_work]-
+[  328.506612] android_work: did not send uevent (0 0           (null))
+[  328.579772] android_work: sent uevent USB_STATE=CONNECTED
+[  328.583426] android_work: sent uevent USB_STATE=DISCONNECTED
+[  328.671980] android_work: sent uevent USB_STATE=CONNECTED
+[  328.674405] configfs-gadget gadget: high-speed config #1: b
+[  328.675203] android_work: sent uevent USB_STATE=CONFIGURED
+[  332.769139] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=6,+++
+[  332.775193] [I/hisi_pd] pd_dpm_handle_pe_event  unkonw event \x0d
+[  332.781365] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=5,+++
+[  332.787321] Pending event is same --> ignore this event 2
+[  332.792942] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=3,+++
+[  337.495417] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=6,+++
+[  337.501440] [I/hisi_pd] pd_dpm_handle_pe_event  unkonw event \x0d
+[  337.507613] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=5,+++
+[  337.513593] Pending event is same --> ignore this event 2
+[  337.519177] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=3,+++
+[  342.226053] [I/hisi_pd] PE:TYPE-C Only Charger!\x0d
+[  342.226065] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=3,+++
+[  342.226077] [I/hisi_pd] pd_dpm_report_pd_sink_vbus : Sink 5000 mV, 500 mA
+[  342.226085] [E/hisi_pd] pd_dpm_vbus_notifier_call: pd_dpm_vbus_notifier_call!!!,++++
+[  342.226094] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=8,+++
+[  411.191328] type=1400 audit(16.855:56): avc: denied { search } for pid=2303 comm="BootAnimation" name="oem" dev="rootfs" ino=10526 scontext=u:r:bootanim:s0 tcontext=u:object_r:camd_file:s0 tclass=dir permissive=0
+[  411.191365] type=1400 audit(417.975:57): avc: denied { syslog_read } for pid=2419 comm="dmesg" scontext=u:r:shell:s0 tcontext=u:r:kernel:s0 tclass=system permissive=0
+[  880.129373] [I/hisi_pd] TPC-I:[CC_Alert] 0/0\x0d
+[  880.139742] [I/hisi_pd] TPC-I:[CC_Change] 0/0\x0d
+[  880.144421] [E/hisi_pd] typec_wait_ps_change: typec_wait_ps_change!!!+++++++++++
+[  880.144430] [E/hisi_pd] typec_wait_ps_change: typec_wait_ps_change!!!-----------
+[  880.144440] [I/hisi_pd] TPC-I:** UnattachWait.PE\x0d
+[  880.144448] [I/hisi_pd] TPC-I:Attached-> NULL\x0d
+[  880.144458] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=7,+++
+[  880.144470] [I/hisi_pd] pd_dpm_set_typec_state = 1
+[  880.144487] [I/hisi_pd] [TCPC-I]usb_port_detached\x0d
+[  880.144832] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=8,+++
+[  880.145187] [I/hisi_pd] pd_dpm_report_device_detach \x0d
+[  880.145196] [E/hisi_pd] pd_dpm_vbus_notifier_call: pd_dpm_vbus_notifier_call!!!,++++
+[  880.145896] [E/hisi_pd] typec_wait_ps_change: typec_wait_ps_change!!!+++++++++++
+[  880.145903] [E/hisi_pd] typec_wait_ps_change: typec_wait_ps_change!!!-----------
+[  880.145910] [E/hisi_pd] typec_unattached_power_entry:!!!+++++++++++
+[  880.146069] [E/hisi_pd] tcpci_disable_vbus_control: !!!++++++++
+[  880.146077] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=0,+++
+[  880.146084] [E/hisi_pd] typec_unattached_power_entry:!!!-----------
+[  880.146115] [E/GPIO_HUB] gpio_hub_switch_to_hub: switch to hub
+[  880.146128] [I/GPIO_HUB] gpio_hub_change_typec_power: typec power no change
+[  880.146161] [USB3][hisi_usb_otg_event]hisi_usb_otg_event in:1
+[  880.146169] [USB3][hisi_usb_otg_event]hisi_usb_otg_event in otg:1
+[  880.146179] [USB3][hisi_usb_otg_event]event: 1
+[  880.146257] [USB3][hisi_usb_otg_event]hisi_usb_otg_event in:2
+[  880.146265] [USB3][hisi_usb_otg_event]hisi_usb_otg_event in otg:2
+[  880.146272] [USB3][hisi_usb_otg_event]event: 2
+[  880.146276] [USB3][event_work]+
+[  880.146302] [USB3][handle_event][handle_event] type: 1
+[  880.146305] [I/hisi_pd] TPC-I:** Unattached.SNK\x0d
+[  880.146324] [dwc3_otg_work]+\x0a evt = 4
+[  880.146324] [dwc3_otg_stop_peripheral]+
+[  880.147140] android_work: sent uevent USB_STATE=DISCONNECTED
+[  880.148704] [dwc3_otg_stop_peripheral]-
+[  880.148714] [dwc3_suspend_device] +
+[  880.148790] android_work: did not send uevent (0 0           (null))
+[  880.149044] [dwc3_suspend_device] -
+[  880.149052] [dwc3_otg_work]-
+[  880.149064] [I/hisi_pd] pd_dpm_report_bc12 : PD_WAKE_UNLOCK
+[  880.149077] [I/hisi_pd] pd_dpm_report_bc12 : event (4)
+[  880.149085] [E/hisi_pd] pd_dpm_vbus_notifier_call: pd_dpm_vbus_notifier_call!!!,++++
+[  880.149094] [USB3][hisi_dwc3_wake_unlock]usb otg wake unlock
+[  880.149110] [USB3][handle_event]hisi usb status: DEVICE -> OFF
+[  880.149122] [USB3][handle_event][handle_event] type: 2
+[  880.149130] [USB3][set_vbus_power]set port power 1
+[  880.149148] [dwc3_otg_work]+\x0a evt = 2
+[  880.149149] [dwc3_resume_device] +
+[  880.149544] [dwc3_resume_device] -
+[  880.149551] [dwc3_otg_start_host]+
+[  880.153292] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[  880.153349] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 1
+[  880.161239] xhci-hcd xhci-hcd.0.auto: hcc params 0x0220fe65 hci version 0x110 quirks 0x00010010
+[  880.161299] xhci-hcd xhci-hcd.0.auto: irq 337, io mem 0xff100000
+[  880.161733] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[  880.161747] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[  880.161758] usb usb1: Product: xHCI Host Controller
+[  880.161770] usb usb1: Manufacturer: Linux 4.9.67-gf777f15 xhci-hcd
+[  880.161780] usb usb1: SerialNumber: xhci-hcd.0.auto
+[  880.167632] hub 1-0:1.0: USB hub found
+[  880.167727] hub 1-0:1.0: 1 port detected
+[  880.168700] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[  880.168736] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 2
+[  880.168932] usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+[  880.169257] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003
+[  880.169271] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[  880.169282] usb usb2: Product: xHCI Host Controller
+[  880.169293] usb usb2: Manufacturer: Linux 4.9.67-gf777f15 xhci-hcd
+[  880.169304] usb usb2: SerialNumber: xhci-hcd.0.auto
+[  880.173577] hub 2-0:1.0: USB hub found
+[  880.174378] hub 2-0:1.0: 1 port detected
+[  880.174974] [dwc3_otg_start_host]-
+[  880.174978] [dwc3_otg_work]-
+[  880.174984] [USB3][hisi_dwc3_wake_lock]usb otg wake lock
+[  880.174992] [USB3][handle_event]hisi usb_status: OFF -> HOST
+[  880.174997] [USB3][event_work]-
+[  880.175004] [USB3][event_work]+
+[  880.175008] [USB3][event_work]-
+[  880.492667] usb 1-1: new high-speed USB device number 2 using xhci-hcd
+[  880.635758] usb 1-1: New USB device found, idVendor=0424, idProduct=2734
+[  880.642651] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  880.642663] usb 1-1: Product: USB2734
+[  880.642675] usb 1-1: Manufacturer: Microchip Tech
+[  880.651397] hub 1-1:1.0: USB hub found
+[  880.651507] hub 1-1:1.0: 5 ports detected
+[  880.752789] usb 2-1: new SuperSpeed USB device number 2 using xhci-hcd
+[  880.773407] usb 2-1: New USB device found, idVendor=0424, idProduct=5734
+[  880.780293] usb 2-1: New USB device strings: Mfr=2, Product=3, SerialNumber=0
+[  880.780305] usb 2-1: Product: USB5734
+[  880.780316] usb 2-1: Manufacturer: Microchip Tech
+[  880.795272] hub 2-1:1.0: USB hub found
+[  880.795377] hub 2-1:1.0: 5 ports detected
+[  880.968723] usb 1-1.1: new full-speed USB device number 3 using xhci-hcd
+[  881.076958] usb 1-1.1: New USB device found, idVendor=222a, idProduct=001c
+[  881.076973] usb 1-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  881.076985] usb 1-1.1: Product: ILITEK Multi-Touch
+[  881.076996] usb 1-1.1: Manufacturer: ILITEK
+[  881.111502] input: ILITEK ILITEK Multi-Touch as /devices/platform/soc/ff200000.hisi_usb/ff100000.dwc3/xhci-hcd.0.auto/usb1/1-1/1-1.1/1-1.1:1.0/0003:222A:001C.0003/input/input5
+[  881.113543] hid-multitouch 0003:222A:001C.0003: input,hidraw0: USB HID v1.11 Device [ILITEK ILITEK Multi-Touch] on usb-xhci-hcd.0.auto-1.1/input0
+[  881.196697] usb 1-1.5: new high-speed USB device number 4 using xhci-hcd
+[  881.303699] usb 1-1.5: New USB device found, idVendor=0424, idProduct=2740
+[  881.310784] usb 1-1.5: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  881.310796] usb 1-1.5: Product: Hub Controller
+[  881.310807] usb 1-1.5: Manufacturer: Microchip Tech
+[  884.364782] [I/hisi_pd] TPC-I:[CC_Alert] 5/0\x0d
+[  884.369375] [I/hisi_pd] TPC-I:** AttachWait.SNK\x0d
+[  884.374753] [I/hisi_pd] [TCPC-I]ps_change=2\x0d
+[  884.494519] [I/hisi_pd] TPC-I:[CC_Change] 5/0\x0d
+[  884.499124] [E/hisi_pd] typec_wait_ps_change: typec_wait_ps_change!!!+++++++++++
+[  884.506736] [E/hisi_pd] typec_wait_ps_change: typec_wait_ps_change!!!-----------
+[  884.514339] [I/GPIO_HUB] gpio_hub_power_off: gpio hub hub vbus no power set success
+[  884.514340] [I/GPIO_HUB] gpio_hub_change_typec_power: typec power no change
+[  884.514350] [USB3][hisi_usb_otg_event]hisi_usb_otg_event in:3
+[  884.514358] [USB3][hisi_usb_otg_event]hisi_usb_otg_event in otg:3
+[  884.514366] [USB3][hisi_usb_otg_event]event: 3
+[  884.514438] [E/GPIO_HUB] gpio_hub_switch_to_typec: switch to typec
+[  884.514447] [USB3][hisi_usb_otg_event]hisi_usb_otg_event in:0
+[  884.514454] [USB3][hisi_usb_otg_event]hisi_usb_otg_event in otg:0
+[  884.514462] [USB3][hisi_usb_otg_event]event: 0
+[  884.514466] [USB3][hisi_usb_otg_event]schedule event_work wait:0]
+[  884.514472] [I/hisi_pd] TPC-I:** Attached.SNK\x0d
+[  884.514479] [E/hisi_pd] typec_wait_ps_change: typec_wait_ps_change!!!+++++++++++
+[  884.514486] [E/hisi_pd] typec_wait_ps_change: typec_wait_ps_change!!!-----------
+[  884.514685] [USB3][event_work]+
+[  884.514697] [USB3][handle_event][handle_event] type: 3
+[  884.514706] [USB3][set_vbus_power]set port power 0
+[  884.514715] [I/hisi_pd] pd_dpm_report_bc12 : PD_WAKE_UNLOCK
+[  884.514727] [I/hisi_pd] pd_dpm_report_bc12 : event (4)
+[  884.514734] [E/hisi_pd] pd_dpm_vbus_notifier_call: pd_dpm_vbus_notifier_call!!!,++++
+[  884.514749] [dwc3_otg_work]+\x0a evt = 1
+[  884.514750] [dwc3_otg_stop_host]+
+[  884.514799] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=3,+++
+[  884.514811] [I/hisi_pd] pd_dpm_report_pd_sink_vbus : Sink 5000 mV, 500 mA
+[  884.514819] [E/hisi_pd] pd_dpm_vbus_notifier_call: pd_dpm_vbus_notifier_call!!!,++++
+[  884.514827] [I/hisi_pd] TPC-I:Attached-> SINK\x0d
+[  884.514835] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=7,+++
+[  884.514844] [I/hisi_pd] pd_dpm_set_typec_state = 2
+[  884.514851] [I/hisi_pd] pd_dpm_set_cc_orientation cc_orientation =0
+[  884.514866] [I/hisi_pd] [TCPC-I]usb_port_attached\x0d
+[  884.514970] xhci-hcd xhci-hcd.0.auto: remove, state 4
+[  884.515030] usb 1-1: USB disconnect, device number 2
+[  884.515065] usb 1-1.1: USB disconnect, device number 3
+[  884.515255] usb usb2: USB disconnect, device number 1
+[  884.515294] usb 2-1: USB disconnect, device number 2
+[  884.515349] [I/hisi_pd] pd_dpm_report_device_attach \x0d
+[  884.525933] xhci-hcd xhci-hcd.0.auto: Host not halted after 16000 microseconds.
+[  884.525939] xhci-hcd xhci-hcd.0.auto: Host controller not halted, aborting reset.
+[  884.526605] xhci-hcd xhci-hcd.0.auto: USB bus 2 deregistered
+[  884.526637] xhci-hcd xhci-hcd.0.auto: remove, state 1
+[  884.526675] usb usb1: USB disconnect, device number 1
+[  884.566066] usb 1-1.5: USB disconnect, device number 4
+[  884.570915] xhci-hcd xhci-hcd.0.auto: USB bus 1 deregistered
+[  884.571161] [dwc3_otg_stop_host]-
+[  884.571169] [dwc3_suspend_device] +
+[  884.571489] [dwc3_suspend_device] -
+[  884.571497] [dwc3_otg_work]-
+[  884.571506] [USB3][hisi_dwc3_wake_unlock]usb otg wake unlock
+[  884.571517] [USB3][handle_event]hiusb_status: HOST -> OFF
+[  884.571529] [USB3][handle_event][handle_event] type: 0
+[  884.571584] android_work: did not send uevent (0 0           (null))
+[  884.880381] [USB3][detect_charger_type]DCD done
+[  884.889514] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=6,+++
+[  884.889524] [I/hisi_pd] pd_dpm_handle_pe_event  unkonw event \x0d
+[  884.889685] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=5,+++
+[  884.889694] Pending event is same --> ignore this event 2
+[  884.889778] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=3,+++
+[  884.912378] [USB3][detect_charger_type]Primary Detection done
+[  884.912386] [USB3][detect_charger_type]Secondary Detection done
+[  884.940675] [USB3][detect_charger_type]type: 0
+[  884.945274] [I/hisi_pd] pd_dpm_report_bc12 : event (0)
+[  884.945284] [E/hisi_pd] pd_dpm_vbus_notifier_call: pd_dpm_vbus_notifier_call!!!,++++
+[  884.945300] [dwc3_otg_work]+\x0a evt = 3
+[  884.945301] [dwc3_resume_device] +
+[  884.945594] [dwc3_resume_device] -
+[  884.945600] [dwc3_otg_start_peripheral]+
+[  884.945621] [dwc3_otg_start_peripheral]-
+[  884.945627] [dwc3_otg_work]-
+[  884.945635] [USB3][hisi_dwc3_wake_lock]usb otg wake lock
+[  884.945649] [USB3][handle_event]hisi usb status: OFF -> DEVICE
+[  884.945656] [USB3][event_work]-
+[  885.297894] android_work: did not send uevent (0 0           (null))
+[  885.370034] android_work: sent uevent USB_STATE=CONNECTED
+[  885.377939] android_work: sent uevent USB_STATE=DISCONNECTED
+[  885.463881] android_work: sent uevent USB_STATE=CONNECTED
+[  885.466464] configfs-gadget gadget: high-speed config #1: b
+[  885.468570] android_work: sent uevent USB_STATE=CONFIGURED
+[  889.592326] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=6,+++
+[  889.592380] [I/hisi_pd] pd_dpm_handle_pe_event  unkonw event \x0d
+[  889.592555] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=5,+++
+[  889.592564] Pending event is same --> ignore this event 2
+[  889.592653] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=3,+++
+[  894.295063] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=6,+++
+[  894.301086] [I/hisi_pd] pd_dpm_handle_pe_event  unkonw event \x0d
+[  894.307243] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=5,+++
+[  894.307252] Pending event is same --> ignore this event 2
+[  894.307322] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=3,+++
+[  899.008230] [I/hisi_pd] PE:TYPE-C Only Charger!\x0d
+[  899.008241] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=3,+++
+[  899.008253] [I/hisi_pd] pd_dpm_report_pd_sink_vbus : Sink 5000 mV, 500 mA
+[  899.008262] [E/hisi_pd] pd_dpm_vbus_notifier_call: pd_dpm_vbus_notifier_call!!!,++++
+[  899.008271] [E/hisi_pd] pd_dpm_handle_pe_event:!!!,event=8,+++
+[ 2404.125975] type=1400 audit(417.975:57): avc: denied { syslog_read } for pid=2419 comm="dmesg" scontext=u:r:shell:s0 tcontext=u:r:kernel:s0 tclass=system permissive=0
+[ 2404.126029] type=1400 audit(2410.911:58): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/storage/kernelOutput.log" dev="tmpfs" ino=17558 scontext=u:r:adbd:s0 tcontext=u:object_r:storage_file:s0 tclass=file permissive=0
+[ 2464.188294] type=1400 audit(2410.911:58): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/storage/kernelOutput.log" dev="tmpfs" ino=17558 scontext=u:r:adbd:s0 tcontext=u:object_r:storage_file:s0 tclass=file permissive=0
+[ 2464.189948] audit_log_lost: 68 callbacks suppressed
+[ 2464.189958] audit: audit_lost=36 audit_rate_limit=5 audit_backlog_limit=64
+[ 2464.189969] audit: rate limit exceeded
+[ 2464.227679] type=1400 audit(2470.971:59): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/vndservice_contexts" dev="rootfs" ino=10551 scontext=u:r:adbd:s0 tcontext=u:object_r:vndservice_contexts_file:s0 tclass=file permissive=0
+[ 2464.227897] type=1400 audit(2470.971:59): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/vndservice_contexts" dev="rootfs" ino=10551 scontext=u:r:adbd:s0 tcontext=u:object_r:vndservice_contexts_file:s0 tclass=file permissive=0
+[ 2464.227951] type=1400 audit(2470.971:60): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/vendor_service_contexts" dev="rootfs" ino=10550 scontext=u:r:adbd:s0 tcontext=u:object_r:nonplat_service_contexts_file:s0 tclass=file permissive=0
+[ 2464.228068] type=1400 audit(2470.971:60): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/vendor_service_contexts" dev="rootfs" ino=10550 scontext=u:r:adbd:s0 tcontext=u:object_r:nonplat_service_contexts_file:s0 tclass=file permissive=0
+[ 2464.228088] type=1400 audit(2470.975:61): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/vendor_hwservice_contexts" dev="rootfs" ino=10547 scontext=u:r:adbd:s0 tcontext=u:object_r:hwservice_contexts_file:s0 tclass=file permissive=0
+[ 2464.228187] type=1400 audit(2470.975:61): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/vendor_hwservice_contexts" dev="rootfs" ino=10547 scontext=u:r:adbd:s0 tcontext=u:object_r:hwservice_contexts_file:s0 tclass=file permissive=0
+[ 2464.228205] type=1400 audit(2470.975:62): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/ueventd.rc" dev="rootfs" ino=10544 scontext=u:r:adbd:s0 tcontext=u:object_r:rootfs:s0 tclass=file permissive=0
+[ 2464.228300] type=1400 audit(2470.975:62): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/ueventd.rc" dev="rootfs" ino=10544 scontext=u:r:adbd:s0 tcontext=u:object_r:rootfs:s0 tclass=file permissive=0
+[ 2464.228855] type=1400 audit(2470.975:63): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/ueventd.hikey960.rc" dev="rootfs" ino=10543 scontext=u:r:adbd:s0 tcontext=u:object_r:rootfs:s0 tclass=file permissive=0
+[ 2465.702864] audit: audit_lost=353 audit_rate_limit=5 audit_backlog_limit=64
+[ 2465.710053] audit: rate limit exceeded
+[ 2466.906058] audit: audit_lost=425 audit_rate_limit=5 audit_backlog_limit=64
+[ 2466.913280] audit: rate limit exceeded
+[ 2468.114347] audit: audit_lost=497 audit_rate_limit=5 audit_backlog_limit=64
+[ 2468.114375] audit: rate limit exceeded
+[ 2469.316789] type=1400 audit(2474.899:541): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/proc/2233/task/2470/net/raw" dev="proc" ino=4026532005 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+[ 2469.317706] audit: audit_lost=569 audit_rate_limit=5 audit_backlog_limit=64
+[ 2469.317716] audit: rate limit exceeded
+[ 2469.350048] type=1400 audit(2476.103:614): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/proc/2233/task/2469/net/arp" dev="proc" ino=4026531996 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+[ 2469.350361] type=1400 audit(2476.103:614): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/proc/2233/task/2469/net/arp" dev="proc" ino=4026531996 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+[ 2469.350397] type=1400 audit(2476.103:615): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/proc/2233/task/2469/net/dev" dev="proc" ino=4026531971 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+[ 2469.350597] type=1400 audit(2476.103:615): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/proc/2233/task/2469/net/dev" dev="proc" ino=4026531971 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+[ 2469.350630] type=1400 audit(2476.103:616): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/proc/2233/task/2469/net/hci" dev="proc" ino=4026531976 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+[ 2469.350811] type=1400 audit(2476.103:616): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/proc/2233/task/2469/net/hci" dev="proc" ino=4026531976 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+[ 2469.350843] type=1400 audit(2476.103:617): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/proc/2233/task/2469/net/pnp" dev="proc" ino=4026532293 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+[ 2469.351022] type=1400 audit(2476.103:617): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/proc/2233/task/2469/net/pnp" dev="proc" ino=4026532293 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+[ 2469.351054] type=1400 audit(2476.103:618): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/proc/2233/task/2469/net/raw" dev="proc" ino=4026532005 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+[ 2470.542876] audit: audit_lost=641 audit_rate_limit=5 audit_backlog_limit=64
+[ 2470.542888] audit: rate limit exceeded
+[ 2471.743583] audit: audit_lost=713 audit_rate_limit=5 audit_backlog_limit=64
+[ 2471.743595] audit: rate limit exceeded
+[ 2472.950709] audit: audit_lost=785 audit_rate_limit=5 audit_backlog_limit=64
+[ 2472.950722] audit: rate limit exceeded
+[ 2474.147592] audit: audit_lost=857 audit_rate_limit=5 audit_backlog_limit=64
+[ 2474.156015] audit: rate limit exceeded
+[ 2475.004808] type=1400 audit(2480.931:926): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/proc/hifidebug/dspdumplog" dev="proc" ino=4026532124 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+[ 2475.037397] type=1400 audit(2481.787:983): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/proc/sys/kernel/acct" dev="proc" ino=803 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+[ 2475.059017] type=1400 audit(2481.787:983): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/proc/sys/kernel/acct" dev="proc" ino=803 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+[ 2475.079868] type=1400 audit(2481.811:984): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/proc/sys/kernel/cad_pid" dev="proc" ino=804 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+[ 2475.101006] type=1400 audit(2481.811:984): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/proc/sys/kernel/cad_pid" dev="proc" ino=804 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+[ 2475.101020] type=1400 audit(2481.811:985): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/proc/sys/kernel/cap_last_cap" dev="proc" ino=805 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+[ 2475.101058] type=1400 audit(2481.811:985): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/proc/sys/kernel/cap_last_cap" dev="proc" ino=805 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+[ 2475.101067] type=1400 audit(2481.811:986): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/proc/sys/kernel/core_pattern" dev="proc" ino=806 scontext=u:r:adbd:s0 tcontext=u:object_r:usermodehelper:s0 tclass=file permissive=0
+[ 2475.101103] type=1400 audit(2481.811:986): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/proc/sys/kernel/core_pattern" dev="proc" ino=806 scontext=u:r:adbd:s0 tcontext=u:object_r:usermodehelper:s0 tclass=file permissive=0
+[ 2475.101110] type=1400 audit(2481.811:987): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/proc/sys/kernel/core_pipe_limit" dev="proc" ino=807 scontext=u:r:adbd:s0 tcontext=u:object_r:usermodehelper:s0 tclass=file permissive=0
+[ 2475.242409] audit: audit_lost=988 audit_rate_limit=5 audit_backlog_limit=64
+[ 2475.242411] audit: rate limit exceeded
+[ 2476.252632] audit: audit_lost=1033 audit_rate_limit=5 audit_backlog_limit=64
+[ 2476.260104] audit: rate limit exceeded
+[ 2477.304921] audit: audit_lost=1075 audit_rate_limit=5 audit_backlog_limit=64
+[ 2477.312984] audit: rate limit exceeded
+[ 2478.360528] audit: audit_lost=1116 audit_rate_limit=5 audit_backlog_limit=64
+[ 2478.360955] audit: rate limit exceeded
+[ 2479.404307] audit: audit_lost=1157 audit_rate_limit=5 audit_backlog_limit=64
+[ 2479.412240] audit: rate limit exceeded
+[ 2480.292602] type=1400 audit(2486.187:1251): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu4/domain0/group2/energy/cap_states" dev="proc" ino=980 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+[ 2480.317625] type=1400 audit(2487.079:1284): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu3/domain0/busy_factor" dev="proc" ino=1021 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+[ 2480.317928] type=1400 audit(2487.079:1284): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu3/domain0/busy_factor" dev="proc" ino=1021 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+[ 2480.317964] type=1400 audit(2487.079:1285): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu3/domain0/busy_idx" dev="proc" ino=1022 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+[ 2480.318073] type=1400 audit(2487.079:1285): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu3/domain0/busy_idx" dev="proc" ino=1022 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+[ 2480.318090] type=1400 audit(2487.079:1286): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu3/domain0/cache_nice_tries" dev="proc" ino=1023 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+[ 2480.318187] type=1400 audit(2487.079:1286): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu3/domain0/cache_nice_tries" dev="proc" ino=1023 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+[ 2480.318207] type=1400 audit(2487.079:1287): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu3/domain0/flags" dev="proc" ino=1024 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+[ 2480.318304] type=1400 audit(2487.079:1287): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu3/domain0/flags" dev="proc" ino=1024 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+[ 2480.318322] type=1400 audit(2487.079:1288): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu3/domain0/forkexec_idx" dev="proc" ino=20481 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+[ 2480.454741] audit: audit_lost=1197 audit_rate_limit=5 audit_backlog_limit=64
+[ 2480.454743] audit: rate limit exceeded
+[ 2481.498599] audit: audit_lost=1230 audit_rate_limit=5 audit_backlog_limit=64
+[ 2481.505987] audit: rate limit exceeded
+[ 2485.706832] type=1400 audit(2488.283:1334): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu2/domain0/busy_factor" dev="proc" ino=18856 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+[ 2485.706888] type=1400 audit(2492.491:1376): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/storage/kernelOutput.log" dev="tmpfs" ino=17558 scontext=u:r:adbd:s0 tcontext=u:object_r:storage_file:s0 tclass=file permissive=0
+[ 2554.868666] EXT4-fs (sdd10): re-mounted. Opts: data=ordered
+[ 2601.390726] type=1400 audit(2492.491:1376): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/storage/kernelOutput.log" dev="tmpfs" ino=17558 scontext=u:r:adbd:s0 tcontext=u:object_r:storage_file:s0 tclass=file permissive=0
+[ 2601.398358] audit: audit_lost=1271 audit_rate_limit=5 audit_backlog_limit=64
+[ 2601.398370] audit: rate limit exceeded
+[ 2601.424581] type=1400 audit(2608.171:1377): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/vndservice_contexts" dev="rootfs" ino=10551 scontext=u:r:adbd:s0 tcontext=u:object_r:vndservice_contexts_file:s0 tclass=file permissive=0
+[ 2601.424809] type=1400 audit(2608.171:1377): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/vndservice_contexts" dev="rootfs" ino=10551 scontext=u:r:adbd:s0 tcontext=u:object_r:vndservice_contexts_file:s0 tclass=file permissive=0
+[ 2601.424829] type=1400 audit(2608.175:1378): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/vendor_service_contexts" dev="rootfs" ino=10550 scontext=u:r:adbd:s0 tcontext=u:object_r:nonplat_service_contexts_file:s0 tclass=file permissive=0
+[ 2601.424940] type=1400 audit(2608.175:1378): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/vendor_service_contexts" dev="rootfs" ino=10550 scontext=u:r:adbd:s0 tcontext=u:object_r:nonplat_service_contexts_file:s0 tclass=file permissive=0
+[ 2601.424960] type=1400 audit(2608.175:1379): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/vendor_hwservice_contexts" dev="rootfs" ino=10547 scontext=u:r:adbd:s0 tcontext=u:object_r:hwservice_contexts_file:s0 tclass=file permissive=0
+[ 2601.425059] type=1400 audit(2608.175:1379): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/vendor_hwservice_contexts" dev="rootfs" ino=10547 scontext=u:r:adbd:s0 tcontext=u:object_r:hwservice_contexts_file:s0 tclass=file permissive=0
+[ 2601.425077] type=1400 audit(2608.175:1380): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/ueventd.rc" dev="rootfs" ino=10544 scontext=u:r:adbd:s0 tcontext=u:object_r:rootfs:s0 tclass=file permissive=0
+[ 2601.425173] type=1400 audit(2608.175:1380): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/ueventd.rc" dev="rootfs" ino=10544 scontext=u:r:adbd:s0 tcontext=u:object_r:rootfs:s0 tclass=file permissive=0
+[ 2601.425191] type=1400 audit(2608.175:1381): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/ueventd.hikey960.rc" dev="rootfs" ino=10543 scontext=u:r:adbd:s0 tcontext=u:object_r:rootfs:s0 tclass=file permissive=0
+[ 2602.914492] audit: audit_lost=1586 audit_rate_limit=5 audit_backlog_limit=64
+[ 2602.914504] audit: rate limit exceeded
+[ 2660.655031] android_work: sent uevent USB_STATE=DISCONNECTED
+[ 2660.660701] init: Service 'adbd' (pid 2233) killed by signal 1
+[ 2660.660783] init: Sending signal 9 to service 'adbd' (pid 2233) process group...
+[ 2660.667001] libprocessgroup: Successfully killed process cgroup uid 0 pid 2233 in 6ms
+[ 2660.673101] init: Untracked pid 2471 killed by signal 9
+[ 2660.673498] init: Untracked pid 2473 exited with status 0
+[ 2660.674399] init: starting service 'adbd'...
+[ 2660.680176] type=1400 audit(2609.699:1705): avc: denied { getattr } for pid=2233 comm=73796E6320737663203139 path="/proc/2233/task/2507/net/raw" dev="proc" ino=4026532005 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+[ 2660.680223] type=1400 audit(2667.463:1762): avc: denied { create } for pid=1 comm="init" name="cgroup.procs" scontext=u:r:init:s0 tcontext=u:object_r:cgroup:s0 tclass=file permissive=0
+[ 2660.684013] init: Created socket '/dev/socket/adbd', mode 660, user 1000, group 1000
+[ 2660.697618] read descriptors
+[ 2660.697635] read strings
+[ 2660.699413] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/init.usb.configfs.rc:21)
+[ 2660.714491] init: Received control message 'start' for 'mdnsd' from pid: 2512 (/system/bin/adbd --root_seclabel=u:r:su:s0)
+[ 2660.715064] init: starting service 'mdnsd'...
+[ 2661.145821] android_work: did not send uevent (0 0           (null))
+[ 2661.218889] android_work: sent uevent USB_STATE=CONNECTED
+[ 2661.225873] android_work: sent uevent USB_STATE=DISCONNECTED
+[ 2661.309701] android_work: sent uevent USB_STATE=CONNECTED
+[ 2661.317352] configfs-gadget gadget: high-speed config #1: b
+[ 2661.324381] android_work: sent uevent USB_STATE=CONFIGURED

@@ -1,0 +1,329 @@
+--------- beginning of main
+01-01 00:00:15.421  2143  2143 I SELinux : SELinux: Loaded service_contexts from:
+01-01 00:00:15.421  2145  2145 I SELinux : SELinux: Loaded service_contexts from:
+01-01 00:00:15.421  2143  2143 I SELinux :     /plat_service_contexts
+01-01 00:00:15.421  2143  2143 I SELinux :     /vendor_service_contexts
+01-01 00:00:15.422  2145  2145 I SELinux :     /vndservice_contexts
+01-01 00:00:01.755  2142  2142 W auditd  : type=2000 audit(0.0:1): initialized
+01-01 00:00:14.663  2142  2142 I auditd  : type=1403 audit(0.0:2): policy loaded auid=4294967295 ses=4294967295
+01-01 00:00:14.683  2142  2142 W auditd  : type=1404 audit(0.0:3): enforcing=1 old_enforcing=0 auid=4294967295 ses=4294967295
+01-01 00:00:14.931     1     1 W init    : type=1400 audit(0.0:4): avc: denied { create } for name="cgroup.procs" scontext=u:r:init:s0 tcontext=u:object_r:cgroup:s0 tclass=file permissive=0
+01-01 00:00:14.951     1     1 W init    : type=1400 audit(0.0:5): avc: denied { create } for name="cpu.rt_period_us" scontext=u:r:init:s0 tcontext=u:object_r:cgroup:s0 tclass=file permissive=0
+01-01 00:00:14.971     1     1 W init    : type=1400 audit(0.0:6): avc: denied { create } for name="cpu.rt_runtime_us" scontext=u:r:init:s0 tcontext=u:object_r:cgroup:s0 tclass=file permissive=0
+01-01 00:00:14.987     1     1 W init    : type=1400 audit(0.0:7): avc: denied { create } for name="cpus" scontext=u:r:init:s0 tcontext=u:object_r:cgroup:s0 tclass=file permissive=0
+01-01 00:00:15.007     1     1 W init    : type=1400 audit(0.0:8): avc: denied { create } for name="mems" scontext=u:r:init:s0 tcontext=u:object_r:cgroup:s0 tclass=file permissive=0
+01-01 00:00:15.023     1     1 W init    : type=1400 audit(0.0:9): avc: denied { create } for name="cpus" scontext=u:r:init:s0 tcontext=u:object_r:cgroup:s0 tclass=file permissive=0
+01-01 00:00:15.039     1     1 W init    : type=1400 audit(0.0:10): avc: denied { create } for name="mems" scontext=u:r:init:s0 tcontext=u:object_r:cgroup:s0 tclass=file permissive=0
+01-01 00:00:15.059     1     1 W init    : type=1400 audit(0.0:11): avc: denied { create } for name="cpus" scontext=u:r:init:s0 tcontext=u:object_r:cgroup:s0 tclass=file permissive=0
+--------- beginning of system
+01-01 00:00:15.475  2146  2146 I vold    : Vold 3.0 (the awakening) firing up
+01-01 00:00:15.475  2146  2146 V vold    : Detected support for: ext4 f2fs vfat
+01-01 00:00:15.479  2146  2146 I vold    : [libfs_mgr]fs_mgr_read_fstab_dt(): failed to read fstab from dt
+01-01 00:00:15.483     1     1 W init    : type=1400 audit(0.0:34): avc: denied { create } for name="cgroup.procs" scontext=u:r:init:s0 tcontext=u:object_r:cgroup:s0 tclass=file permissive=0
+01-01 00:00:15.486  2146  2168 D vold    : e4crypt_init_user0
+01-01 00:00:15.486  2146  2168 D vold    : e4crypt_prepare_user_storage for volume null, user 0, serial 0, flags 1
+01-01 00:00:15.486  2146  2168 D vold    : Preparing: /data/system/users/0
+01-01 00:00:15.487  2146  2168 D vold    : Preparing: /data/misc/profiles/cur/0
+01-01 00:00:15.487  2146  2168 D vold    : Preparing: /data/system_de/0
+01-01 00:00:15.487  2146  2168 D vold    : Preparing: /data/misc_de/0
+01-01 00:00:15.487  2146  2168 D vold    : Preparing: /data/user_de/0
+01-01 00:00:15.488  2146  2168 D vold    : e4crypt_unlock_user_key 0 serial=0 token_present=0
+01-01 00:00:15.488  2146  2168 E vold    : Failed to chmod /data/system_ce/0: No such file or directory
+01-01 00:00:15.488  2146  2168 E vold    : Failed to chmod /data/misc_ce/0: No such file or directory
+01-01 00:00:15.488  2146  2168 E vold    : Failed to chmod /data/media/0: No such file or directory
+01-01 00:00:15.521  2213  2213 I /system/bin/tzdatacheck: timezone distro dir /data/misc/zoneinfo/current does not exist. No action required.
+01-01 00:00:15.523  1540  1540 W init    : type=1400 audit(0.0:35): avc: denied { search } for name="wifi" dev="sdd13" ino=131093 scontext=u:r:vendor_init:s0 tcontext=u:object_r:wifi_data_file:s0 tclass=dir permissive=0
+01-01 00:00:15.527     1     1 W init    : type=1400 audit(0.0:36): avc: denied { create } for name="cgroup.procs" scontext=u:r:init:s0 tcontext=u:object_r:cgroup:s0 tclass=file permissive=0
+01-01 00:00:15.559     1     1 I chatty  : uid=0(root) /init identical 5 lines
+01-01 00:00:15.559     1     1 W init    : type=1400 audit(0.0:42): avc: denied { create } for name="cgroup.procs" scontext=u:r:init:s0 tcontext=u:object_r:cgroup:s0 tclass=file permissive=0
+01-01 00:00:15.578  2220  2220 I ServiceManagement: Removing namespace from process name android.hidl.allocator@1.0-service to allocator@1.0-s.
+01-01 00:00:15.591  2222  2222 I ServiceManagement: Removing namespace from process name android.hardware.bluetooth@1.0-service.btlinux to bluetooth@1.0-s.
+01-01 00:00:15.596  2229  2229 I lowmemorykiller: Using in-kernel low memory killer interface
+01-01 00:00:15.598  2223  2223 D BroadcastRadioDefault.service: Registering BroadcastRadioFactory as a service
+01-01 00:00:15.598  2223  2223 I ServiceManagement: Removing namespace from process name android.hardware.broadcastradio@1.1-service.dmhd1000 to broadcastradio@.
+01-01 00:00:15.599  2225  2225 W /vendor/bin/hw/android.hardware.configstore@1.0-service: libminijail[2225]: allowing syscall: connect
+01-01 00:00:15.599  2225  2225 W /vendor/bin/hw/android.hardware.configstore@1.0-service: libminijail[2225]: allowing syscall: fcntl
+01-01 00:00:15.599  2225  2225 W /vendor/bin/hw/android.hardware.configstore@1.0-service: libminijail[2225]: allowing syscall: sendto
+01-01 00:00:15.599  2225  2225 W /vendor/bin/hw/android.hardware.configstore@1.0-service: libminijail[2225]: allowing syscall: socket
+01-01 00:00:15.599  2225  2225 W /vendor/bin/hw/android.hardware.configstore@1.0-service: libminijail[2225]: allowing syscall: writev
+01-01 00:00:15.602  2221  2221 I automotive.vehicle@2.0-service: registerEmulator, emulator: 0x7b2b228420
+01-01 00:00:15.602  2225  2225 W /vendor/bin/hw/android.hardware.configstore@1.0-service: libminijail[2225]: logging seccomp filter failures
+01-01 00:00:15.603  2225  2225 I ServiceManagement: Removing namespace from process name android.hardware.configstore@1.0-service to configstore@1.0.
+01-01 00:00:15.603  2221  2240 E SocketComm: open: socket() failed, mSockFd=-1, errno=13
+01-01 00:00:15.603  2221  2221 I automotive.vehicle@2.0-impl: VehicleHalManager::init
+01-01 00:00:15.604  2221  2221 I automotive.vehicle@2.0-service: Registering as service...
+01-01 00:00:15.604  2221  2221 I ServiceManagement: Removing namespace from process name android.hardware.automotive.vehicle@2.0-service to vehicle@2.0-ser.
+01-01 00:00:15.604  2233  2243 W libc    : Unable to set property "ctl.start" to "mdnsd": error code: 0x20
+01-01 00:00:15.606  2233  2241 I adbd    : initializing functionfs
+01-01 00:00:15.606  2233  2241 I adbd    : opening control endpoint /dev/usb-ffs/adb/ep0
+01-01 00:00:15.608  2233  2241 I adbd    : functionfs successfully initialized
+01-01 00:00:15.608  2233  2241 I adbd    : registering usb transport
+01-01 00:00:15.611  2233  2246 I adbd    : <unknown>: read thread spawning
+01-01 00:00:15.612  2233  2247 I adbd    : <unknown>: write thread spawning
+01-01 00:00:15.613  2227  2227 D vndksupport: Loading /vendor/lib64/hw/android.hardware.memtrack@1.0-impl.so from current namespace instead of sphal namespace.
+01-01 00:00:15.613  2223  2223 D BroadcastRadioDefault.service: Joining RPC Thread pool
+01-01 00:00:15.614  2221  2221 I automotive.vehicle@2.0-service: Ready
+01-01 00:00:15.615  2144  2144 W hwservicemanager: getTransport: Cannot find entry android.hardware.thermal@1.1::IThermal/default in either framework or device manifest.
+01-01 00:00:15.616  2227  2227 D vndksupport: Loading /vendor/lib64/hw/memtrack.default.so from current namespace instead of sphal namespace.
+01-01 00:00:15.618  2227  2227 I ServiceManagement: Removing namespace from process name android.hardware.memtrack@1.0-service to memtrack@1.0-se.
+01-01 00:00:15.618  2227  2227 I android.hardware.memtrack@1.0-service: Registration complete for android.hardware.memtrack@1.0::IMemtrack/default.
+01-01 00:00:15.618  2231  2231 W thermalserviced: Unable to get Thermal HAL V1.1, vendor thermal event notification not available
+01-01 00:00:15.620  2144  2144 W hwservicemanager: getTransport: Cannot find entry android.hardware.health@1.0::IHealth/default in either framework or device manifest.
+01-01 00:00:15.626  2144  2144 W hwservicemanager: getTransport: Cannot find entry android.hardware.gnss@1.0::IGnss/default in either framework or device manifest.
+01-01 00:00:15.627  2226  2226 D vndksupport: Loading /vendor/lib64/hw/android.hardware.gnss@1.0-impl.so from current namespace instead of sphal namespace.
+01-01 00:00:15.631  2226  2226 D u-blox  : CCfg::load : fileName="/system/etc/u-blox.conf"
+01-01 00:00:15.631  2226  2226 D u-blox  : CCfg::get item="SERIAL_DEVICE" def="/dev/ttyO3" => "/dev/ttyACM0"
+01-01 00:00:15.631  2226  2226 D u-blox  : CCfg::get item="BAUDRATE" def=9600 => 115200
+01-01 00:00:15.631  2226  2226 D u-blox  : CCfg::get item="BAUDRATE_DEF" def=9600 => 9600
+01-01 00:00:15.631  2226  2226 D u-blox  : CCfg::get item="ALP_TEMP" def="/data/gnss/aiding.ubx" => "/data/gnss/aiding.ubx"
+01-01 00:00:15.631  2226  2226 D u-blox  : CCfg::get item="STOP_TIMEOUT" def=5 => 5
+01-01 00:00:15.631  2226  2226 D u-blox  : CCfg::get item="XTRA_POLL_INTERVAL" def=20 => 20
+01-01 00:00:15.631  2226  2226 D u-blox  : CCfg::get item="PERSISTENCE" def=1 => 1
+01-01 00:00:15.631  2226  2226 D u-blox  : CCfg::get item="UBX_HOST" def="" => "agps.u-blox.com"
+01-01 00:00:15.631  2226  2226 D u-blox  : CCfg::get item="UBX_PORT" def=46434 => 46434
+01-01 00:00:15.632  2226  2226 I ServiceManagement: Removing namespace from process name android.hardware.gnss@1.0-service to gnss@1.0-servic.
+01-01 00:00:15.632  2226  2226 I android.hardware.gnss@1.0-service: Registration complete for android.hardware.gnss@1.0::IGnss/default.
+01-01 00:00:15.667  2224  2224 D android.hardware.cas@1.0-service: android.hardware.cas@1.0-service starting...
+01-01 00:00:15.667  2224  2224 I ServiceManagement: Removing namespace from process name android.hardware.cas@1.0-service to cas@1.0-service.
+01-01 00:00:15.679  2144  2144 W hwservicemanager: getTransport: Cannot find entry android.hardware.configstore@1.0::ISurfaceFlingerConfigs/default in either framework or device manifest.
+01-01 00:00:15.681  2230  2230 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::maxFrameBufferAcquiredBuffers retrieved: 2 (default)
+01-01 00:00:15.682  2144  2144 W hwservicemanager: getTransport: Cannot find entry android.hardware.configstore@1.0::ISurfaceFlingerConfigs/default in either framework or device manifest.
+01-01 00:00:15.683  2230  2230 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::startGraphicsAllocatorService retrieved: 1
+01-01 00:00:15.683  2230  2230 D vndksupport: Loading /vendor/lib64/hw/android.hardware.graphics.allocator@2.0-impl.so from current namespace instead of sphal namespace.
+01-01 00:00:15.684  2230  2230 D vndksupport: Loading /vendor/lib64/hw/gralloc.hikey960.so from current namespace instead of sphal namespace.
+01-01 00:00:15.686  2230  2230 I SurfaceFlinger: Registration complete for android.hardware.graphics.allocator@2.0::IAllocator/default.
+01-01 00:00:15.687  2230  2230 I SurfaceFlinger: Using HWComposer service: 'default'
+01-01 00:00:15.687  2230  2230 I SurfaceFlinger: SurfaceFlinger is starting
+01-01 00:00:15.687  2230  2230 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::vsyncEventPhaseOffsetNs retrieved: 1000000 (default)
+01-01 00:00:15.687  2230  2230 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::vsyncSfEventPhaseOffsetNs retrieved: 1000000 (default)
+01-01 00:00:15.687  2230  2230 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasSyncFramework retrieved: 1
+01-01 00:00:15.687  2230  2230 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::useContextPriority retrieved: 0 (default)
+01-01 00:00:15.687  2230  2230 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::presentTimeOffsetFromVSyncNs retrieved: 0
+01-01 00:00:15.687  2230  2230 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::useHwcForRGBtoYUV retrieved: 0
+01-01 00:00:15.687  2230  2230 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::maxVirtualDisplaySize retrieved: 0 (default)
+01-01 00:00:15.687  2230  2230 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::useVrFlinger retrieved: 0 (default)
+01-01 00:00:15.687  2230  2230 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::maxFrameBufferAcquiredBuffers retrieved: 2 (default)
+01-01 00:00:15.687  2230  2230 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasWideColorDisplay retrieved: 0
+01-01 00:00:15.688  2230  2230 I SurfaceFlinger: Enabling HWC virtual displays
+01-01 00:00:15.688  2230  2230 I SurfaceFlinger: Disabling Triple Buffering
+01-01 00:00:15.688  2230  2230 I SurfaceFlinger: Treble testing override: 'false'
+01-01 00:00:15.688  2230  2230 I SurfaceFlinger: SurfaceFlinger's main thread ready to run. Initializing graphics H/W...
+01-01 00:00:15.688  2230  2230 I SurfaceFlinger: Phase offest NS: 1000000
+01-01 00:00:15.689  2230  2230 D vndksupport: Loading /system/lib64/egl/libGLES_mali.so from current namespace instead of sphal namespace.
+01-01 00:00:15.736  2230  2230 D libEGL  : loaded /system/lib64/egl/libGLES_mali.so
+01-01 00:00:15.762  2230  2230 D vndksupport: Loading /vendor/lib64/hw/gralloc.hikey960.so from current namespace instead of sphal namespace.
+01-01 00:00:15.763  2144  2144 W hwservicemanager: getTransport: Cannot find entry android.hardware.configstore@1.0::ISurfaceFlingerConfigs/default in either framework or device manifest.
+01-01 00:00:15.764  2230  2230 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasWideColorDisplay retrieved: 0
+01-01 00:00:15.765  2230  2230 I SurfaceFlinger: EGL information:
+01-01 00:00:15.765  2230  2230 I SurfaceFlinger: vendor    : Android
+01-01 00:00:15.765  2230  2230 I SurfaceFlinger: version   : 1.4 Android META-EGL
+01-01 00:00:15.765  2230  2230 I SurfaceFlinger: extensions: EGL_KHR_get_all_proc_addresses EGL_ANDROID_presentation_time EGL_KHR_swap_buffers_with_damage EGL_ANDROID_get_native_client_buffer EGL_ANDROID_front_buffer_auto_refresh EGL_ANDROID_get_frame_timestamps EGL_KHR_image EGL_KHR_image_base EGL_KHR_gl_colorspace EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_gl_renderbuffer_image EGL_KHR_fence_sync EGL_KHR_create_context EGL_KHR_config_attribs EGL_KHR_surfaceless_context EGL_EXT_create_context_robustness EGL_ANDROID_image_native_buffer EGL_KHR_wait_sync EGL_ANDROID_recordable EGL_KHR_partial_update EGL_KHR_mutable_render_buffer EGL_IMG_context_priority 
+01-01 00:00:15.765  2230  2230 I SurfaceFlinger: Client API: OpenGL_ES
+01-01 00:00:15.765  2230  2230 I SurfaceFlinger: EGLSurface: 8-8-8-8, config=0x79ab520008
+01-01 00:00:15.772  2230  2230 I SurfaceFlinger: OpenGL ES informations:
+01-01 00:00:15.772  2230  2230 I SurfaceFlinger: vendor    : ARM
+01-01 00:00:15.772  2230  2230 I SurfaceFlinger: renderer  : Mali-G71
+01-01 00:00:15.772  2230  2230 I SurfaceFlinger: version   : OpenGL ES 3.2 v1.r4p0-01rel0.c6531c1b281e0bcc2d1f26be73b35761
+01-01 00:00:15.772  2230  2230 I SurfaceFlinger: extensions: GL_EXT_debug_marker GL_ARM_rgba8 GL_ARM_mali_shader_binary GL_OES_depth24 GL_OES_depth_texture GL_OES_depth_texture_cube_map GL_OES_packed_depth_stencil GL_OES_rgb8_rgba8 GL_EXT_read_format_bgra GL_OES_compressed_paletted_texture GL_OES_compressed_ETC1_RGB8_texture GL_OES_standard_derivatives GL_OES_EGL_image GL_OES_EGL_image_external GL_OES_EGL_image_external_essl3 GL_OES_EGL_sync GL_OES_texture_npot GL_OES_vertex_half_float GL_OES_required_internalformat GL_OES_vertex_array_object GL_OES_mapbuffer GL_EXT_texture_format_BGRA8888 GL_EXT_texture_rg GL_EXT_texture_type_2_10_10_10_REV GL_OES_fbo_render_mipmap GL_OES_element_index_uint GL_EXT_shadow_samplers GL_OES_texture_compression_astc GL_KHR_texture_compression_astc_ldr GL_KHR_texture_compression_astc_hdr GL_KHR_texture_compression_astc_sliced_3d GL_KHR_debug GL_EXT_occlusion_query_boolean GL_EXT_disjoint_timer_query GL_EXT_blend_minmax GL_EXT_discard_framebuffer GL_OES_get_program_binary GL_OES_texture_3D GL_EXT_texture_storage GL_EXT_multisamp
+01-01 00:00:15.772  2230  2230 I SurfaceFlinger: GL_MAX_TEXTURE_SIZE = 8192
+01-01 00:00:15.772  2230  2230 I SurfaceFlinger: GL_MAX_VIEWPORT_DIMS = 8192
+01-01 00:00:15.773  2230  2230 D vndksupport: Loading /vendor/lib64/hw/android.hardware.graphics.composer@2.1-impl.so from current namespace instead of sphal namespace.
+01-01 00:00:15.777  2230  2230 I HwcPassthrough: falling back to FB HAL
+01-01 00:00:15.777  2230  2230 D vndksupport: Loading /vendor/lib64/hw/gralloc.hikey960.so from current namespace instead of sphal namespace.
+01-01 00:00:16.204  2230  2230 W [Gralloc-Warning]: init_frame_buffer_locked:274 fbdev pixclock is zero for fd: 26
+01-01 00:00:16.204  2230  2230 I [Gralloc]: using (fd=26)
+01-01 00:00:16.204  2230  2230 I [Gralloc]: id           = dss
+01-01 00:00:16.204  2230  2230 I [Gralloc]: xres         = 1920 px
+01-01 00:00:16.204  2230  2230 I [Gralloc]: yres         = 1080 px
+01-01 00:00:16.204  2230  2230 I [Gralloc]: xres_virtual = 1920 px
+01-01 00:00:16.204  2230  2230 I [Gralloc]: yres_virtual = 2160 px
+01-01 00:00:16.204  2230  2230 I [Gralloc]: bpp          = 32
+01-01 00:00:16.204  2230  2230 I [Gralloc]: r            = 16:8
+01-01 00:00:16.204  2230  2230 I [Gralloc]: g            =  8:8
+01-01 00:00:16.204  2230  2230 I [Gralloc]: b            =  0:8
+01-01 00:00:16.204  2230  2230 I [Gralloc]: width        = 305 mm (159.895081 dpi)
+01-01 00:00:16.204  2230  2230 I [Gralloc]: height       = 171 mm (160.421051 dpi)
+01-01 00:00:16.204  2230  2230 I [Gralloc]: refresh rate = 60.00 Hz
+01-01 00:00:16.211  2230  2230 D vndksupport: Loading /vendor/lib64/hw/android.hardware.graphics.mapper@2.0-impl.so from current namespace instead of sphal namespace.
+01-01 00:00:16.212  2230  2230 D vndksupport: Loading /vendor/lib64/hw/gralloc.hikey960.so from current namespace instead of sphal namespace.
+01-01 00:00:16.213  2230  2230 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000
+01-01 00:00:16.530  2230  2230 D SurfaceFlinger: shader cache generated - 24 shaders in 317.345825 ms
+01-01 00:00:16.532  2230  2230 D SurfaceFlinger: Set power mode=2, type=0 flinger=0x79ab46c000
+01-01 00:00:16.823  2303  2307 D vndksupport: Loading /system/lib64/egl/libGLES_mali.so from current namespace instead of sphal namespace.
+01-01 00:00:16.830  2303  2307 D libEGL  : loaded /system/lib64/egl/libGLES_mali.so
+01-01 00:00:16.855  2303  2303 W BootAnimation: type=1400 audit(0.0:56): avc: denied { search } for name="oem" dev="rootfs" ino=10526 scontext=u:r:bootanim:s0 tcontext=u:object_r:camd_file:s0 tclass=dir permissive=0
+01-01 00:00:16.857  2303  2307 D vndksupport: Loading /vendor/lib64/hw/gralloc.hikey960.so from current namespace instead of sphal namespace.
+01-01 00:00:16.859  2144  2144 W hwservicemanager: getTransport: Cannot find entry android.hardware.configstore@1.0::ISurfaceFlingerConfigs/default in either framework or device manifest.
+01-01 00:00:16.860  2303  2307 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasWideColorDisplay retrieved: 0
+01-01 00:00:16.861  2303  2307 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000
+01-01 00:00:16.901  2303  2307 D BootAnimation: BootAnimationShownTiming start time: 10057ms
+01-01 00:00:16.930  2230  2256 D vndksupport: Loading /vendor/lib64/hw/android.hardware.graphics.mapper@2.0-impl.so from current namespace instead of sphal namespace.
+01-01 00:00:16.931  2230  2256 D vndksupport: Loading /vendor/lib64/hw/gralloc.hikey960.so from current namespace instead of sphal namespace.
+01-01 00:00:16.932  2230  2256 E ion     : ioctl c0044901 failed with code -1: Invalid argument
+01-01 00:00:16.933  2230  2256 D vndksupport: Loading /vendor/lib64/hw/gralloc.hikey960.so from current namespace instead of sphal namespace.
+01-01 00:00:16.934  2303  2307 D vndksupport: Loading /vendor/lib64/hw/android.hardware.graphics.mapper@2.0-impl.so from current namespace instead of sphal namespace.
+01-01 00:00:16.934  2303  2307 D vndksupport: Loading /vendor/lib64/hw/gralloc.hikey960.so from current namespace instead of sphal namespace.
+01-01 00:00:16.935  2303  2307 D vndksupport: Loading /vendor/lib64/hw/gralloc.hikey960.so from current namespace instead of sphal namespace.
+01-01 00:00:16.962  2230  2230 D vndksupport: Loading /vendor/lib64/hw/gralloc.hikey960.so from current namespace instead of sphal namespace.
+01-01 00:00:16.963  2230  2230 I [Gralloc]: Register framebuffer 0x0x79ab43f200 is no-op
+01-01 00:00:16.964  2230  2230 I [Gralloc]: Register framebuffer 0x0x79ab060d20 is no-op
+01-01 00:00:17.959  2230  2256 D vndksupport: Loading /vendor/lib64/hw/gralloc.hikey960.so from current namespace instead of sphal namespace.
+01-01 00:00:17.960  2303  2307 D vndksupport: Loading /vendor/lib64/hw/gralloc.hikey960.so from current namespace instead of sphal namespace.
+01-01 00:00:17.979  2230  2230 D vndksupport: Loading /vendor/lib64/hw/gralloc.hikey960.so from current namespace instead of sphal namespace.
+01-01 00:00:17.980  2230  2230 I [Gralloc]: Register framebuffer 0x0x79ab43f3e0 is no-op
+01-01 00:00:17.982  2230  2230 I [Gralloc]: Register framebuffer 0x0x79ab43f340 is no-op
+01-01 00:00:17.989  2230  2256 D vndksupport: Loading /vendor/lib64/hw/gralloc.hikey960.so from current namespace instead of sphal namespace.
+01-01 00:00:17.990  2303  2307 D vndksupport: Loading /vendor/lib64/hw/gralloc.hikey960.so from current namespace instead of sphal namespace.
+01-01 00:00:17.996  2230  2230 D vndksupport: Loading /vendor/lib64/hw/gralloc.hikey960.so from current namespace instead of sphal namespace.
+01-01 00:00:20.605  2233  2243 E adbd    : Could not start mdnsd.
+01-01 00:00:23.606  2233  2243 E adbd    : Could not register mDNS service (-65563).
+01-01 00:02:56.081  2233  2246 E adbd    : remote usb: read terminated (message): Cannot send after transport endpoint shutdown
+01-01 00:02:56.082  2233  2246 I adbd    : <unknown>: read failed: Cannot send after transport endpoint shutdown
+01-01 00:02:56.083  2233  2233 I adbd    : <unknown>: already offline
+01-01 00:02:56.083  2233  2233 I adbd    : BlockingConnectionAdapter(<unknown>): stopping
+01-01 00:02:56.084  2233  2233 I adbd    : BlockingConnectionAdapter(<unknown>): stopped
+01-01 00:02:56.084  2233  2233 I adbd    : BlockingConnectionAdapter(<unknown>): destructing
+01-01 00:02:56.084  2233  2233 I adbd    : BlockingConnectionAdapter(<unknown>): already stopped
+01-01 00:02:56.084  2233  2233 I adbd    : closing functionfs transport
+01-01 00:02:56.168  2233  2241 I adbd    : initializing functionfs
+01-01 00:02:56.168  2233  2241 I adbd    : functionfs successfully initialized
+01-01 00:02:56.169  2233  2241 I adbd    : registering usb transport
+01-01 00:02:56.170  2233  2364 I adbd    : <unknown>: write thread spawning
+01-01 00:02:56.170  2233  2363 I adbd    : <unknown>: read thread spawning
+01-01 00:05:31.646  2233  2363 E adbd    : remote usb: read terminated (message): Cannot send after transport endpoint shutdown
+01-01 00:05:31.647  2233  2363 I adbd    : <unknown>: read failed: Cannot send after transport endpoint shutdown
+01-01 00:05:31.648  2233  2233 I adbd    : <unknown>: already offline
+01-01 00:05:31.648  2233  2233 I adbd    : BlockingConnectionAdapter(<unknown>): stopping
+01-01 00:05:31.648  2233  2233 I adbd    : BlockingConnectionAdapter(<unknown>): stopped
+01-01 00:05:31.649  2233  2233 I adbd    : BlockingConnectionAdapter(<unknown>): destructing
+01-01 00:05:31.649  2233  2233 I adbd    : BlockingConnectionAdapter(<unknown>): already stopped
+01-01 00:05:31.649  2233  2233 I adbd    : closing functionfs transport
+01-01 00:05:32.000  2233  2241 I adbd    : initializing functionfs
+01-01 00:05:32.001  2233  2241 I adbd    : functionfs successfully initialized
+01-01 00:05:32.001  2233  2241 I adbd    : registering usb transport
+01-01 00:05:32.002  2233  2374 I adbd    : <unknown>: read thread spawning
+01-01 00:05:32.002  2233  2375 I adbd    : <unknown>: write thread spawning
+01-01 00:06:26.853  2233  2233 I adbd    : <unknown>: already offline
+01-01 00:06:57.975  2419  2419 W dmesg   : type=1400 audit(0.0:57): avc: denied { syslog_read } for scontext=u:r:shell:s0 tcontext=u:r:kernel:s0 tclass=system permissive=0
+01-01 00:14:46.939  2233  2374 E adbd    : remote usb: read terminated (message): Cannot send after transport endpoint shutdown
+01-01 00:14:46.939  2233  2374 I adbd    : <unknown>: read failed: Cannot send after transport endpoint shutdown
+01-01 00:14:46.940  2233  2233 I adbd    : <unknown>: offline
+01-01 00:14:46.941  2233  2233 I adbd    : BlockingConnectionAdapter(<unknown>): stopping
+01-01 00:14:52.652  2233  2233 I adbd    : BlockingConnectionAdapter(<unknown>): stopped
+01-01 00:14:52.652  2233  2233 I adbd    : BlockingConnectionAdapter(<unknown>): destructing
+01-01 00:14:52.652  2233  2233 I adbd    : BlockingConnectionAdapter(<unknown>): already stopped
+01-01 00:14:52.653  2233  2233 I adbd    : closing functionfs transport
+01-01 00:14:52.736  2233  2241 I adbd    : initializing functionfs
+01-01 00:14:52.737  2233  2241 I adbd    : functionfs successfully initialized
+01-01 00:14:52.737  2233  2241 I adbd    : registering usb transport
+01-01 00:14:52.738  2233  2470 I adbd    : <unknown>: write thread spawning
+01-01 00:14:52.739  2233  2469 I adbd    : <unknown>: read thread spawning
+01-01 00:14:52.740  2233  2233 I adbd    : <unknown>: already offline
+01-01 00:40:10.911  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:58): avc: denied { getattr } for comm=73796E6320737663203139 path="/storage/kernelOutput.log" dev="tmpfs" ino=17558 scontext=u:r:adbd:s0 tcontext=u:object_r:storage_file:s0 tclass=file permissive=0
+01-01 00:41:10.971  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:59): avc: denied { getattr } for comm=73796E6320737663203139 path="/vndservice_contexts" dev="rootfs" ino=10551 scontext=u:r:adbd:s0 tcontext=u:object_r:vndservice_contexts_file:s0 tclass=file permissive=0
+01-01 00:41:10.971  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:60): avc: denied { getattr } for comm=73796E6320737663203139 path="/vendor_service_contexts" dev="rootfs" ino=10550 scontext=u:r:adbd:s0 tcontext=u:object_r:nonplat_service_contexts_file:s0 tclass=file permissive=0
+01-01 00:41:10.975  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:61): avc: denied { getattr } for comm=73796E6320737663203139 path="/vendor_hwservice_contexts" dev="rootfs" ino=10547 scontext=u:r:adbd:s0 tcontext=u:object_r:hwservice_contexts_file:s0 tclass=file permissive=0
+01-01 00:41:10.975  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:62): avc: denied { getattr } for comm=73796E6320737663203139 path="/ueventd.rc" dev="rootfs" ino=10544 scontext=u:r:adbd:s0 tcontext=u:object_r:rootfs:s0 tclass=file permissive=0
+01-01 00:41:10.975  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:63): avc: denied { getattr } for comm=73796E6320737663203139 path="/ueventd.hikey960.rc" dev="rootfs" ino=10543 scontext=u:r:adbd:s0 tcontext=u:object_r:rootfs:s0 tclass=file permissive=0
+01-01 00:41:10.975  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:64): avc: denied { getattr } for comm=73796E6320737663203139 path="/plat_hwservice_contexts" dev="rootfs" ino=10528 scontext=u:r:adbd:s0 tcontext=u:object_r:hwservice_contexts_file:s0 tclass=file permissive=0
+01-01 00:41:10.975  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:65): avc: denied { getattr } for comm=73796E6320737663203139 path="/oem" dev="rootfs" ino=10526 scontext=u:r:adbd:s0 tcontext=u:object_r:camd_file:s0 tclass=dir permissive=0
+01-01 00:41:12.483  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:383): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2493/net/arp" dev="proc" ino=4026531996 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:12.487  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:384): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2493/net/dev" dev="proc" ino=4026531971 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:12.487  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:385): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2493/net/hci" dev="proc" ino=4026531976 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:12.487  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:386): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2493/net/pnp" dev="proc" ino=4026532293 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:12.487  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:387): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2493/net/raw" dev="proc" ino=4026532005 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:13.687  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:460): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2472/net/arp" dev="proc" ino=4026531996 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:13.687  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:461): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2472/net/dev" dev="proc" ino=4026531971 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:13.691  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:462): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2472/net/hci" dev="proc" ino=4026531976 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:13.691  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:463): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2472/net/pnp" dev="proc" ino=4026532293 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:13.691  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:464): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2472/net/raw" dev="proc" ino=4026532005 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:14.895  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:537): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2470/net/arp" dev="proc" ino=4026531996 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:14.899  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:538): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2470/net/dev" dev="proc" ino=4026531971 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:14.899  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:539): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2470/net/hci" dev="proc" ino=4026531976 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:14.899  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:540): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2470/net/pnp" dev="proc" ino=4026532293 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:14.899  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:541): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2470/net/raw" dev="proc" ino=4026532005 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:16.103  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:614): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2469/net/arp" dev="proc" ino=4026531996 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:16.103  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:615): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2469/net/dev" dev="proc" ino=4026531971 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:16.103  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:616): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2469/net/hci" dev="proc" ino=4026531976 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:16.103  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:617): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2469/net/pnp" dev="proc" ino=4026532293 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:16.103  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:618): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2469/net/raw" dev="proc" ino=4026532005 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:17.323  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:691): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2242/net/arp" dev="proc" ino=4026531996 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:17.327  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:692): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2242/net/dev" dev="proc" ino=4026531971 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:17.327  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:693): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2242/net/hci" dev="proc" ino=4026531976 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:17.327  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:694): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2242/net/pnp" dev="proc" ino=4026532293 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:17.327  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:695): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2242/net/raw" dev="proc" ino=4026532005 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:18.523  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:768): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2241/net/arp" dev="proc" ino=4026531996 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:18.527  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:769): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2241/net/dev" dev="proc" ino=4026531971 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:18.527  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:770): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2241/net/hci" dev="proc" ino=4026531976 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:18.527  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:771): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2241/net/pnp" dev="proc" ino=4026532293 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:18.527  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:772): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2241/net/raw" dev="proc" ino=4026532005 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:19.731  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:845): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2233/net/arp" dev="proc" ino=4026531996 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:19.735  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:846): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2233/net/dev" dev="proc" ino=4026531971 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:19.735  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:847): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2233/net/hci" dev="proc" ino=4026531976 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:19.735  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:848): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2233/net/pnp" dev="proc" ino=4026532293 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:19.735  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:849): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2233/net/raw" dev="proc" ino=4026532005 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:20.771  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:922): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/uid_procstat/set" dev="proc" ino=4026531862 scontext=u:r:adbd:s0 tcontext=u:object_r:proc_uid_procstat_set:s0 tclass=file permissive=0
+01-01 00:41:20.851  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:923): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/uid_cputime/show_uid_stat" dev="proc" ino=4026531858 scontext=u:r:adbd:s0 tcontext=u:object_r:proc_uid_cputime_showstat:s0 tclass=file permissive=0
+01-01 00:41:20.855  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:924): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/uid_cputime/remove_uid_range" dev="proc" ino=4026531857 scontext=u:r:adbd:s0 tcontext=u:object_r:proc_uid_cputime_removeuid:s0 tclass=file permissive=0
+01-01 00:41:20.931  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:925): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/hifidebug/debuglevel" dev="proc" ino=4026532123 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:20.931  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:926): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/hifidebug/dspdumplog" dev="proc" ino=4026532124 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:21.787  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:983): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/acct" dev="proc" ino=803 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:21.811  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:984): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/cad_pid" dev="proc" ino=804 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:21.811  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:985): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/cap_last_cap" dev="proc" ino=805 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:21.811  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:986): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/core_pattern" dev="proc" ino=806 scontext=u:r:adbd:s0 tcontext=u:object_r:usermodehelper:s0 tclass=file permissive=0
+01-01 00:41:21.811  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:987): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/core_pipe_limit" dev="proc" ino=807 scontext=u:r:adbd:s0 tcontext=u:object_r:usermodehelper:s0 tclass=file permissive=0
+01-01 00:41:22.831  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1105): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu7/domain0/group1/energy/cap_states" dev="proc" ino=17680 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:22.835  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1106): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu7/domain0/group1/energy/idle_states" dev="proc" ino=17681 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:22.835  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1107): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu7/domain0/group1/energy/nr_cap_states" dev="proc" ino=17682 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:22.835  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1108): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu7/domain0/group1/energy/nr_idle_states" dev="proc" ino=17683 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:22.959  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1109): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu7/domain0/group0/energy/cap_states" dev="proc" ino=17685 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:23.927  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1155): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu6/domain0/group1/energy/cap_states" dev="proc" ino=904 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:23.927  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1156): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu6/domain0/group1/energy/idle_states" dev="proc" ino=905 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:23.931  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1157): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu6/domain0/group1/energy/nr_cap_states" dev="proc" ino=906 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:23.931  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1158): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu6/domain0/group1/energy/nr_idle_states" dev="proc" ino=907 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:24.087  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1159): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu6/domain0/group0/energy/cap_states" dev="proc" ino=909 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:24.983  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1201): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu5/domain0/group2/energy/cap_states" dev="proc" ino=916 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:24.987  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1202): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu5/domain0/group2/energy/idle_states" dev="proc" ino=917 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:24.987  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1203): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu5/domain0/group2/energy/nr_cap_states" dev="proc" ino=918 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:24.987  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1204): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu5/domain0/group2/energy/nr_idle_states" dev="proc" ino=919 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:25.143  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1205): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu5/domain0/group1/energy/cap_states" dev="proc" ino=921 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:26.027  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1247): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu4/domain0/group3/energy/cap_states" dev="proc" ino=975 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:26.027  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1248): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu4/domain0/group3/energy/idle_states" dev="proc" ino=976 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:26.027  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1249): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu4/domain0/group3/energy/nr_cap_states" dev="proc" ino=977 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:26.031  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1250): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu4/domain0/group3/energy/nr_idle_states" dev="proc" ino=978 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:26.187  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1251): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu4/domain0/group2/energy/cap_states" dev="proc" ino=980 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:27.079  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1284): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu3/domain0/busy_factor" dev="proc" ino=1021 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:27.079  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1285): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu3/domain0/busy_idx" dev="proc" ino=1022 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:27.079  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1286): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu3/domain0/cache_nice_tries" dev="proc" ino=1023 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:27.079  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1287): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu3/domain0/flags" dev="proc" ino=1024 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:27.079  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1288): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu3/domain0/forkexec_idx" dev="proc" ino=20481 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:28.199  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1330): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu2/domain1/group0/energy/cap_states" dev="proc" ino=18852 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:28.199  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1331): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu2/domain1/group0/energy/idle_states" dev="proc" ino=18853 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:28.199  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1332): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu2/domain1/group0/energy/nr_cap_states" dev="proc" ino=18854 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:28.199  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1333): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu2/domain1/group0/energy/nr_idle_states" dev="proc" ino=18855 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:28.283  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1334): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/sys/kernel/sched_domain/cpu2/domain0/busy_factor" dev="proc" ino=18856 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:41:32.491  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1376): avc: denied { getattr } for comm=73796E6320737663203139 path="/storage/kernelOutput.log" dev="tmpfs" ino=17558 scontext=u:r:adbd:s0 tcontext=u:object_r:storage_file:s0 tclass=file permissive=0
+01-01 00:43:28.171  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1377): avc: denied { getattr } for comm=73796E6320737663203139 path="/vndservice_contexts" dev="rootfs" ino=10551 scontext=u:r:adbd:s0 tcontext=u:object_r:vndservice_contexts_file:s0 tclass=file permissive=0
+01-01 00:43:28.175  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1378): avc: denied { getattr } for comm=73796E6320737663203139 path="/vendor_service_contexts" dev="rootfs" ino=10550 scontext=u:r:adbd:s0 tcontext=u:object_r:nonplat_service_contexts_file:s0 tclass=file permissive=0
+01-01 00:43:28.175  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1379): avc: denied { getattr } for comm=73796E6320737663203139 path="/vendor_hwservice_contexts" dev="rootfs" ino=10547 scontext=u:r:adbd:s0 tcontext=u:object_r:hwservice_contexts_file:s0 tclass=file permissive=0
+01-01 00:43:28.175  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1380): avc: denied { getattr } for comm=73796E6320737663203139 path="/ueventd.rc" dev="rootfs" ino=10544 scontext=u:r:adbd:s0 tcontext=u:object_r:rootfs:s0 tclass=file permissive=0
+01-01 00:43:28.175  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1381): avc: denied { getattr } for comm=73796E6320737663203139 path="/ueventd.hikey960.rc" dev="rootfs" ino=10543 scontext=u:r:adbd:s0 tcontext=u:object_r:rootfs:s0 tclass=file permissive=0
+01-01 00:43:28.179  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1382): avc: denied { getattr } for comm=73796E6320737663203139 path="/plat_hwservice_contexts" dev="rootfs" ino=10528 scontext=u:r:adbd:s0 tcontext=u:object_r:hwservice_contexts_file:s0 tclass=file permissive=0
+01-01 00:43:28.183  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1383): avc: denied { getattr } for comm=73796E6320737663203139 path="/oem" dev="rootfs" ino=10526 scontext=u:r:adbd:s0 tcontext=u:object_r:camd_file:s0 tclass=dir permissive=0
+01-01 00:43:28.183  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1384): avc: denied { getattr } for comm=73796E6320737663203139 path="/init.zygote64_32.rc" dev="rootfs" ino=10514 scontext=u:r:adbd:s0 tcontext=u:object_r:rootfs:s0 tclass=file permissive=0
+01-01 00:43:28.183  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1385): avc: denied { getattr } for comm=73796E6320737663203139 path="/init.zygote32.rc" dev="rootfs" ino=10513 scontext=u:r:adbd:s0 tcontext=u:object_r:rootfs:s0 tclass=file permissive=0
+01-01 00:43:29.699  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1701): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2507/net/arp" dev="proc" ino=4026531996 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:43:29.699  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1702): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2507/net/dev" dev="proc" ino=4026531971 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:43:29.699  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1703): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2507/net/hci" dev="proc" ino=4026531976 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:43:29.699  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1704): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2507/net/pnp" dev="proc" ino=4026532293 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:43:29.699  2233  2233 W /system/bin/adbd: type=1400 audit(0.0:1705): avc: denied { getattr } for comm=73796E6320737663203139 path="/proc/2233/task/2507/net/raw" dev="proc" ino=4026532005 scontext=u:r:adbd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+01-01 00:44:27.399  2233  2233 W /system/bin/adbd: dnssd_clientstub DNSServiceRefDeallocate called with NULL DNSServiceRef
+01-01 00:44:27.463     1     1 W init    : type=1400 audit(0.0:1762): avc: denied { create } for name="cgroup.procs" scontext=u:r:init:s0 tcontext=u:object_r:cgroup:s0 tclass=file permissive=0
+01-01 00:44:27.488  2512  2513 I adbd    : initializing functionfs
+01-01 00:44:27.489  2512  2513 I adbd    : opening control endpoint /dev/usb-ffs/adb/ep0
+01-01 00:44:27.503  2512  2513 I adbd    : functionfs successfully initialized
+01-01 00:44:27.504  2512  2513 I adbd    : registering usb transport
+01-01 00:44:27.504  2512  2517 I adbd    : <unknown>: read thread spawning
+01-01 00:44:27.504  2512  2518 I adbd    : <unknown>: write thread spawning
+01-01 00:44:27.567     1     1 W init    : type=1400 audit(0.0:1763): avc: denied { create } for name="cgroup.procs" scontext=u:r:init:s0 tcontext=u:object_r:cgroup:s0 tclass=file permissive=0
+01-01 00:44:29.176  2512  2512 I adbd    : <unknown>: already offline
